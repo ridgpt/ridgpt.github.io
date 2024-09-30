@@ -70,7 +70,7 @@
                 resultText = `This fact is likely to be <b>${classification}</b>.`;
                 resultClass = classification === "real" ? "real" : "fake";
             } else {
-                resultText = "This fact does not currently exist within "The Database of Facts".";
+                resultText = "This fact does not currently exist within the database.";
                 const closestMatches = findClosestMatch(fact);
                 if (closestMatches.length > 0) {
                     suggestionsElement.innerHTML = "Did you mean: " + closestMatches.join(', ') + "?";
