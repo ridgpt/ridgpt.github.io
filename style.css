@@ -26,6 +26,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh; /* Ensure full height */
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 .ai-text-theme {
@@ -191,7 +193,7 @@ background: linear-gradient(-135deg, #52c41a, #ffffff); -webkit-background-clip:
 }
 
 .result-visible .copyright {
-    margin-top: 10px; /* Add space below results/suggestions */
+    margin-top: 10px; /* Add space below info section */
 }
 
 /* Animations */
@@ -207,6 +209,11 @@ background: linear-gradient(-135deg, #52c41a, #ffffff); -webkit-background-clip:
 
 /* Responsive Design */
 @media (max-width: 600px) {
+    body {
+        margin-top: unset;
+        margin-bottom: unset;
+    }
+
     .container {
         padding: 20px;
     }
@@ -218,8 +225,4 @@ background: linear-gradient(-135deg, #52c41a, #ffffff); -webkit-background-clip:
     button {
         font-size: 1em;
     }       
-    
-    body {
-        margin-top: 50px;
-        margin-bottom: 50px
-    }
+}
