@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fact-Checker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+      <div class="container">
+        <h1 style="margin-bottom:0px;">Fact-Checker</h1>
+        <h6>The first fact-checker created using <b><span class="ai-text-theme">Artificial Intelligence (AI)</span></b>.</h6>
+        <br>
+        <textarea id="factInput" rows="8" placeholder="Enter fact here..."></textarea>
+        <button id="checkBtn">Perform Fact-Check</button>
+
+        <div id="resultContainer">
+            <div id="result" class="hide"></div>
+        </div>
+        <div id="suggestionsContainer">
+            <div id="suggestions" class="hide"></div>
+<hr style="margin-top:20px">
+        </div>
+
+        <h6 class="info-section">
+            All facts are stored within a JavaScript database known as "The Database of Facts". This database is regularly updated, and can be accessed by clicking <b><a href="facts.js">here</a></b>.
+        </h6>
+        <h6 class="copyright">
+            Copyright © 2021-<script>document.write(new Date().getFullYear());</script>, <b><span class="lm-text-theme">Loud Monkey Designs</span></b>. All rights reserved.
+        </h6>
+    </div>
+
+  <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="container modal-content">
+            <h1 style="margin-bottom: 15px;">Welcome to the Fact-Checker!</h1>
+<hr>
+            <span style="font-size: 1em;">This fact-checker, created by <b><span class="lm-text-theme">Loud Monkey Designs</span></b> with the help of <b><span class="ai-text-theme">Artificial Intelligence (AI)</span></b>, is currently in beta. This means that many core functions are actively being tweaked, and may not work properly. To report a problem, please click <b><a href="https://forms.gle/yk6g9SmfjwzvSPpN8">here</a></b>. To start fact-checking, please click the button below.</span>
+            <button id="closeModalBtn">Get Started</button>
+        </div>
+    </div>
+
+    <!-- Include external .js files -->
+    <script src="facts.js"></script>
+    <script src="results.js"></script>
+    <script src="more.js"></script>  
+</body>
+</html>
