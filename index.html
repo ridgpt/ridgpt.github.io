@@ -52,6 +52,11 @@
         contentInput.addEventListener('input', function() {
             const currentLength = contentInput.value.length;
             charCount.textContent = `${currentLength} / ${maxChars}`;
+            
+            // Check if maximum characters reached
+            if (currentLength >= maxChars) {
+                countDisplay.classList.add('max-char'); // Add red color class
+            } else 
 
             // Limit input to maxChars
             if (currentLength > maxChars) {
