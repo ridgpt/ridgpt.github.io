@@ -52,6 +52,7 @@ hr {
             animation: spin 1s linear infinite; /* Spinner animation */
             position: relative; /* To position the gradient border */
             overflow: hidden; /* To hide overflow from the inner div */
+            margin: 20px auto; /* Center the loader */
         }
 
         /* Inner element to create gradient effect */
@@ -63,7 +64,7 @@ hr {
             right: -4px; /* Match the border width */
             bottom: -4px; /* Match the border width */
             border-radius: 50%; /* Make it round */
-            background: conic-gradient(from 90deg, #3498db, #9b59b6); /* Gradient colors */
+            background: conic-gradient(from 90deg, var(--primary-color), var(--secondary-color)); /* Gradient colors */
             animation: spin 1s linear infinite; /* Spinner animation for gradient */
         }
 
