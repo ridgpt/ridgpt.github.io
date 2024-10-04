@@ -48,10 +48,20 @@ hr {
     border-radius: 50%;
 
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); /* Gradient effect */
-    border-top: 5px solid #ffffff;
     animation: fadeIn 1s ease-in-out, spin 1s linear infinite; /* Spinning animation & fade-in */
     margin: 20px auto; /* Center the loader */
     display: none; /* Initially hidden */
+}
+
+#loader::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Adjust position to overlap the top */
+    left: 0;
+    right: 0;
+    height: 10px; /* Height of the gradient border */
+    background: conic-gradient(from 180deg, var(--primary-color), var(--secondary-color)); /* Gradient for the top border */
+    border-radius: 50%; /* Match the loader's curve */
 }
 
 .container {
