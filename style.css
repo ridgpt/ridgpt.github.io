@@ -46,10 +46,12 @@ hr {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); /* Gradient effect */
-    border-top: 5px solid #ffffff;
+     background:linear-gradient(yellow, #e90b5a);
+  /* Show only 10px from the border */
+  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 10px),#fff 0);
+          mask:radial-gradient(farthest-side,#0000 calc(100% - 10px),#fff 0);
+    position: fixed;
+    inset : calc(50% - 50px);
     animation: fadeIn 1s ease-in-out, spin 1s linear infinite; /* Spinning animation & fade-in */
     margin: 20px auto; /* Center the loader */
     display: none; /* Initially hidden */
