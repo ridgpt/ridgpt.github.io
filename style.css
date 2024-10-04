@@ -118,7 +118,6 @@ textarea {
     color: var(--text-color);
     opacity: 0.9;
     transition: border-color 0.3s, transform 0.3s;
-    box-shadow: 0 8px 25px var(--shadow); /* Soft shadow effect */
     box-sizing: border-box; /* Include padding and border in the element's total width */
 }
 
@@ -132,6 +131,7 @@ textarea:focus {
     border-radius: 10px;
     border: 2px solid transparent;
     outline: none;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button {
@@ -146,13 +146,13 @@ button {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 25px var(--shadow); /* Soft shadow effect */
     transition: background-image 0.3s, transform 0.2s;
 }
 
 button:hover {
     background-image: linear-gradient(-145deg, var(--primary-color), var(--secondary-color)); /* Gradient for hover */
     transform: translateY(-2px);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button:active {
