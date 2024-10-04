@@ -46,25 +46,13 @@ hr {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
+
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); /* Gradient effect */
     border-top: 5px solid #ffffff;
     animation: fadeIn 1s ease-in-out, spin 1s linear infinite; /* Spinning animation & fade-in */
     margin: 20px auto; /* Center the loader */
     display: none; /* Initially hidden */
 }
-
-#loader::before {
-    content: '';
-    position: absolute;
-    top: -5px; /* Adjust to position correctly */
-    left: 0;
-    right: 0;
-    background: conic-gradient(from 180deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
-    border-radius: 50%; /* Rounded top corners */
-}
-
 
 .container {
     background: var(--card-background); /* Glass effect */
