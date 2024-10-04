@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RidGPT</title>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://kit.fontawesome.com/7eb79cf2e3.js" crossorigin="anonymous"></script>
 
     <link rel="icon" type="image/png" sizes="192x192" href="/ico/android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/ico/android-chrome-512x512.png">
@@ -30,8 +31,8 @@
         <div id="charCount">0 / 5000</div> <!-- Character count div -->
         </div>
         
-        <button id="checkBtn">Check Content</button>
-        <button id="retrainBtn">Reload Content Checker <h6 class="small">Only reload the content checker if you believe that the given result is 100% inaccurate.</h6></button> <!-- Reload button (starts the retrain function) added here -->
+        <button id="checkBtn">Check Content <i class="fa-regular fa-eye"></i></button>
+        <button id="retrainBtn">Reload Content Checker <i class="fa-solid fa-arrows-rotate"></i> <h6 class="small">Only reload the content checker if you believe that the given result is 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6></button> <!-- Reload button (starts the retrain function) added here -->
         <div id="loader" class="loader"></div> <!-- Loader div -->
         <div id="resultContainer">
             <div id="result" class="hide"></div>
@@ -44,7 +45,6 @@
         Copyright © <script>document.write(new Date().getFullYear());</script>, <b><span class="lm-text-theme">RidGPT</span></b>. All rights reserved.
     </h6>
 
-    <script src="app.js"></script>
     <script>
         const contentInput = document.getElementById('contentInput');
         const charCount = document.getElementById('charCount');
@@ -61,5 +61,7 @@
             }
         });
     </script>
+    
+    <script src="app.js"></script>
 </body>
 </html>
