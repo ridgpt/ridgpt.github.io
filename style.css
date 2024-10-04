@@ -46,23 +46,24 @@ hr {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: conic-gradient(from 180deg, var(--primary-color), var(--secondary-color) 50%, #ffffff 0); /* Gradient effect on top */
-    border: 5px solid transparent; /* Invisible border to keep the size */
-    border-top: 5px solid transparent; /* Transparent top border to be replaced by the gradient */
+    position: relative;
+    background: transparent;
     animation: fadeIn 1s ease-in-out, spin 1s linear infinite; /* Spinning animation & fade-in */
     margin: 20px auto; /* Center the loader */
-    display: none; /* Initially hidden */
-    position: relative;
+    display: block; /* Make the loader visible */
 }
 
-#loader::before {
+#loader::after {
     content: '';
     position: absolute;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     border-radius: 50%;
-    border: 5px solid transparent; /* Base transparent border */
-    border-top: 5px solid; /* Create a visible border for the top */
-    border-image: conic-gradient(from 180deg, var(--primary-color), var(--secondary-color)) 1; /* Apply gradient to the top border */
+    border: 5px solid transparent;
+    border-top: 5px solid; /* Creates the top border */
+    border-image: conic-gradient(from 180deg, var(--primary-color), var(--secondary-color)) 1;
 }
 
 .container {
