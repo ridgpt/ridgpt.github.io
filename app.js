@@ -57,7 +57,7 @@ async function trainModel(model, trainingData) {
 }
 
 async function analyzeContent(model, vocab, text) {
-    const maxLength = 40; // Define the max length for encoding
+    const maxLength = 5000; // Define the max length for encoding
     const encodedText = text.toLowerCase().replace(/[^a-z0-9\s]/g, '')
         .split(' ').map(word => vocab[word] || -1);
 
@@ -76,7 +76,7 @@ async function analyzeContent(model, vocab, text) {
 
 async function retrainModel(newDataset) {
     const preprocessedData = preprocessData(newDataset);
-    const { encodedData, vocab } = encodeText(preprocessedData, 40); // Use the same maxLength
+    const { encodedData, vocab } = encodeText(preprocessedData, 5000); // Use the same maxLength
 
     let model;
     try {
@@ -108,7 +108,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         return;
     }
 
-    const maxLength = 40; // Define the max length for encoding
+    const maxLength = 5000; // Define the max length for encoding
 
     // Show loader and hide results initially
     loader.style.display = 'block';
