@@ -55,6 +55,17 @@ hr {
     display: none; /* Initially hidden */
 }
 
+#loader::before {
+    content: '';
+    position: absolute;
+    top: -5px; /* Adjust to position correctly */
+    left: 0;
+    right: 0;
+    background: conic-gradient(from 180deg, var(--primary-color), var(--secondary-color)); /* Gradient background */
+    border-radius: 50%; /* Rounded top corners */
+}
+
+
 .container {
     background: var(--card-background); /* Glass effect */
     padding: 40px;
