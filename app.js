@@ -53,7 +53,7 @@ async function trainModel(model, trainingData) {
     const xs = tf.tensor2d(trainingData.map(item => item.encoded));
     const ys = tf.tensor2d(trainingData.map(item => item.label), [trainingData.length, 1]);
 
-    await model.fit(xs, ys, { epochs: 50 });
+    await model.fit(xs, ys, { epochs: 200 });
 }
 
 async function analyzeContent(model, vocab, text) {
