@@ -186,6 +186,10 @@ button:active {
     margin-bottom: 0px;
 }
 
+.small {
+    font-size: 0.7em;
+}
+
 .textarea-container {
     position: relative;
 }
