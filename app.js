@@ -145,7 +145,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         // Hide loader and show the result with percentages
         loader.style.display = 'none';
         resultElement.innerHTML = `
-            <h6 class="reshed">Results <i class="fa-solid fa-chevron-down"></i></h6>
+            <h6 class="reshed" style=" background: linear-gradient(145deg, var(--primary-color), var(--secondary-color)); background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Results <i class="fa-solid fa-chevron-down"></i></h6>
             This content was ${analysisResult.text} 
             <hr>
             <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i>
