@@ -220,7 +220,3 @@ button:active {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
 }
-
-.max-char {
-    color: red; /* Color when max characters reached */
-}
