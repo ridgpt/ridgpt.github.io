@@ -166,7 +166,7 @@ button:active {
     min-height: 30px;
     transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0.8;
-    animation: fadeIn 0.4s ease-in-out; /* Fade-in */
+    animation: fadeIn 1s ease-in-out; /* Fade-in */
 }
 
 .info-section {
