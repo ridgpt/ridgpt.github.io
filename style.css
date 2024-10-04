@@ -60,8 +60,8 @@ hr {
     left: 0;
     right: 0;
     height: 10px; /* Height of the gradient border */
-    background: conic-gradient(from 180deg, var(--primary-color), var(--secondary-color)); /* Gradient for the top border */
-    border-radius: 50%; /* Match the loader's curve */
+    background: linear-gradient(from 180deg, var(--primary-color), var(--secondary-color)); /* Gradient for the top border */
+    border-radius: 100%; /* Match the loader's curve */
 }
 
 .container {
