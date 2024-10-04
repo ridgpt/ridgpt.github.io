@@ -83,7 +83,7 @@ async function retrainModel(newDataset) {
         model = await loadModel(); // Implement loadModel to fetch the existing model
     } catch (error) {
         console.error("Failed to load model, creating a new one:", error);
-        model = createModel([40]); // Create a new model if loading fails
+        model = createModel([5000]); // Create a new model if loading fails
     }
 
     // Retrain the model with the new data
