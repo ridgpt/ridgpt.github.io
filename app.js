@@ -99,12 +99,12 @@ async function retrainModel(newDataset) {
     await trainModel(model, encodedData);
 
     // Save the retrained model
-    await model.save('localstorage://your-model-name'); // Save to local storage
+    await model.save('localstorage://ridgpt'); // Save to local storage
 }
 
 // Load the model function
 async function loadModel() {
-    return await tf.loadLayersModel('localstorage://your-model-name'); // Update with your model name
+    return await tf.loadLayersModel('localstorage://ridgpt'); // Update with your model name
 }
 
 document.getElementById('checkBtn').addEventListener('click', async function() {
