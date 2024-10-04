@@ -66,7 +66,7 @@ async function trainModel(model, trainingData) {
 }
 
 async function analyzeContent(model, vocab, text) {
-    const maxLength = 40; // Define the max length for encoding
+    const maxLength = 5000; // Define the max length for encoding
     const encodedText = text.toLowerCase().replace(/[^a-z0-9\s]/g, '')
         .split(' ').map(word => vocab[word] || -1);
 
@@ -85,14 +85,14 @@ async function analyzeContent(model, vocab, text) {
 
 async function retrainModel(newDataset) {
     const preprocessedData = preprocessData(newDataset);
-    const { encodedData, vocab } = encodeText(preprocessedData, 40); // Use the same maxLength
+    const { encodedData, vocab } = encodeText(preprocessedData, 5000); // Use the same maxLength
 
     let model;
     try {
         model = await loadModel(); // Implement loadModel to fetch the existing model
     } catch (error) {
-        console.error("Failed to load model, creating a new one:", error);
-        model = createModel([40]); // Create a new model if loading fails
+        console.error("Failed to load content checker, trying to reload:", error);
+        model = createModel([5000]); // Create a new model if loading fails
     }
 
     // Retrain the model with the new data
@@ -117,7 +117,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         return;
     }
 
-    const maxLength = 40; // Define the max length for encoding
+    const maxLength = 5000; // Define the max length for encoding
 
     // Show loader and hide results initially
     loader.style.display = 'block';
@@ -149,9 +149,9 @@ document.getElementById('retrainBtn').addEventListener('click', async function()
     const newDataset = await loadDataset(); // Load new dataset for retraining
     try {
         await retrainModel(newDataset); // Retrain the model with new data
-        alert("Model retrained successfully!");
+        alert("Content checker reloaded successfully!");
     } catch (error) {
-        console.error("Error during retraining:", error);
-        alert("Failed to retrain the model. Check the console for details.");
+        console.error("Error while reloading the content checker:", error);
+        alert("Failed to reload the content checker. Check the console for details.");
     }
 });
