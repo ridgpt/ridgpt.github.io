@@ -178,7 +178,6 @@ button:active {
     background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
-    font-size: 1.2;
 }
 
 .info-section {
