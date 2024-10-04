@@ -59,7 +59,7 @@ async function trainModel(model, trainingData) {
     });
 
     await model.fit(xs, ys, {
-        epochs: 100,
+        epochs: 50,
         validationSplit: 0.2, // Use 20% of the data for validation
         callbacks: [earlyStopping]
     });
