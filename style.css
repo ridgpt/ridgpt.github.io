@@ -6,7 +6,7 @@
     --card-background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     --text-color: #333333; /* Dark text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
-    --shadow: rgba(255, 255, 255, 0.1);
+    --shadow: rgba(0, 0, 0, 0.1);
 }
 
 * {
@@ -146,7 +146,7 @@ button {
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    box-shadow: 0 8px 16px 0 rgba(255,255,255,0.2), 0 6px 20px 0 var(--shadow);
+    box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.5), 0 2px 5px var(--shadow); /* Glossy effect */
     transition: background-image 0.3s, transform 0.2s;
 }
 
