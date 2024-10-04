@@ -56,13 +56,12 @@ hr {
 #loader::before {
     content: '';
     position: absolute;
-    width: 60px;
-    top: -5px; /* Adjust position to overlap the top */
+    top: -5px; /* Adjust to position correctly */
     left: 0;
     right: 0;
-    height: 60px; /* Height of the gradient border */
-    background: var(--background-gradient)); /* Gradient for the top border */
-    border-radius: 100%; /* Match the loader's curve */
+    height: 10px; /* Thickness of the gradient border */
+    background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); /* Gradient effect */
+    border-radius: 50%; /* Rounded top corners */
 }
 
 .container {
