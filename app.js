@@ -107,15 +107,7 @@ async function loadModel() {
     return await tf.loadLayersModel('localstorage://ridgpt'); // Update with your model name
 }
 
-// Vibration function
-function vibrateButton() {
-    if (navigator.vibrate) {
-        navigator.vibrate(100); // Vibrate for 100 milliseconds
-    }
-}
-
 document.getElementById('checkBtn').addEventListener('click', async function() {
-    vibrateButton(); // Vibration feedback
     const content = document.getElementById('contentInput').value.trim();
     const resultElement = document.getElementById('result');
     const loader = document.getElementById('loader');
@@ -154,7 +146,6 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
 
 // Retrain button event listener
 document.getElementById('retrainBtn').addEventListener('click', async function() {
-    vibrateButton(); // Vibration feedback
     const newDataset = await loadDataset(); // Load new dataset for retraining
     try {
         await retrainModel(newDataset); // Retrain the model with new data
