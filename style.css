@@ -41,19 +41,31 @@ hr {
     margin-bottom: 15px;
     }
 
-/* Loader styles with gradient and border-radius for the top corners */
-#loader {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border-top-left-radius: 25px;
-    border-top-right-radius: 25px;
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); /* Gradient effect */
-    border-top: 5px solid #ffffff;
-    animation: spin 1s linear infinite, fadeIn 0.4s ease-in-out; /* Spinning animation & fade-in */
-    margin: 20px auto; /* Center the loader */
-    display: none; /* Initially hidden */
-}
+
+        /* Loader styles */
+        .loader {
+            display: none; /* Initially hidden */
+            border: 4px solid rgba(0, 0, 0, 0.1); /* Light border */
+            border-radius: 50%; /* Make it round */
+            width: 40px; /* Loader width */
+            height: 40px; /* Loader height */
+            animation: spin 1s linear infinite; /* Spinner animation */
+            position: relative; /* To position the gradient border */
+            overflow: hidden; /* To hide overflow from the inner div */
+        }
+
+        /* Inner element to create gradient effect */
+        .loader::before {
+            content: '';
+            position: absolute;
+            top: -4px; /* Match the border width */
+            left: -4px; /* Match the border width */
+            right: -4px; /* Match the border width */
+            bottom: -4px; /* Match the border width */
+            border-radius: 50%; /* Make it round */
+            background: conic-gradient(from 90deg, #3498db, #9b59b6); /* Gradient colors */
+            animation: spin 1s linear infinite; /* Spinner animation for gradient */
+        }
 
 /* Spin animation */
 @keyframes spin {
