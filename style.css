@@ -60,7 +60,7 @@ hr {
     left: 0;
     right: 0;
     height: 10px; /* Height of the gradient border */
-    background: linear-gradient(from 180deg, var(--primary-color), var(--secondary-color)); /* Gradient for the top border */
+    background: var(--background-gradient)); /* Gradient for the top border */
     border-radius: 100%; /* Match the loader's curve */
 }
 
