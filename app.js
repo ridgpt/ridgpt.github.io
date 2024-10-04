@@ -146,7 +146,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         loader.style.display = 'none';
         resultElement.innerHTML = `
             This content was ${analysisResult.text} 
-            <br><br>
+            <hr>
             <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% 
             <br>
             <span style="color: #34C759;">Human</span> Involvement: ${analysisResult.humanPercentage}%
