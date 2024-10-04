@@ -45,8 +45,7 @@ hr {
         /* Loader styles */
         .loader {
             display: none; /* Initially hidden */
-            background: linear-gradient(from 90deg, var(--primary-color), var(--secondary-color)); /* Gradient colors */
-            animation: spin 1s linear infinite; /* Spinner animation for gradient */
+            background: var(--background-gradient); /* Gradient effect */
             border-radius: 50%; /* Make it round */
             width: 40px; /* Loader width */
             height: 40px; /* Loader height */
@@ -65,7 +64,8 @@ hr {
             right: -4px; /* Match the border width */
             bottom: -4px; /* Match the border width */
             border-radius: 50%; /* Make it round */
-            background: var(--background-gradient); /* Gradient effect */
+            background: linear-gradient(from 90deg, var(--primary-color), var(--secondary-color)); /* Gradient colors */
+            animation: spin 1s linear infinite; /* Spinner animation for gradient */
         }
 
 /* Spin animation */
