@@ -149,7 +149,7 @@ document.getElementById('retrainBtn').addEventListener('click', async function()
     const newDataset = await loadDataset(); // Load new dataset for retraining
     try {
         await retrainModel(newDataset); // Retrain the model with new data
-        alert("Content checker reloaded successfully!");
+        alert("Content checker reloaded successfully.");
     } catch (error) {
         console.error("Error while reloading the content checker:", error);
         alert("Failed to reload the content checker. Check the console for details.");
