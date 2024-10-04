@@ -119,6 +119,8 @@ textarea {
     opacity: 0.9;
     transition: border-color 0.3s, transform 0.3s;
     box-sizing: border-box; /* Include padding and border in the element's total width */
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
 textarea::placeholder {
@@ -147,6 +149,8 @@ button {
     position: relative;
     overflow: hidden;
     transition: background-image 0.3s, transform 0.2s;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
 }
 
 button:hover {
