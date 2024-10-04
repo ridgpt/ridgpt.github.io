@@ -145,12 +145,12 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         // Hide loader and show the result with percentages
         loader.style.display = 'none';
         resultElement.innerHTML = `
-            <h6 class="reshed">Results</h6>
+            <h6 class="reshed">Results <i class="fa-solid fa-chevron-down"></i></h6>
             This content was ${analysisResult.text} 
             <hr>
             <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i>
-     <br><br>
-            <span style="color: #34C759;">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i>
+
+            <span style="margin-top: 20px; color: #34C759;">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i>
         `;
         resultElement.style.display = 'block';
     } catch (error) {
