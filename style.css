@@ -6,7 +6,7 @@
     --card-background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     --text-color: #333333; /* Dark text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
-    --shadow: rgba(0, 0, 0, 0.1);
+    --shadow: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -131,7 +131,7 @@ textarea:focus {
     border-radius: 10px;
     border: 2px solid transparent;
     outline: none;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button {
@@ -152,7 +152,7 @@ button {
 button:hover {
     background-image: linear-gradient(-145deg, var(--primary-color), var(--secondary-color)); /* Gradient for hover */
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button:active {
