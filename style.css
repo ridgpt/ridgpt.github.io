@@ -61,7 +61,7 @@ hr {
     right: 0;
     height: 50%; /* Covers the top half */
     background: linear-gradient(to right, var(--primary-color), var(--secondary-color)); /* Gradient effect */
-    border-radius: 50% 50% 0 0; /* Rounded top corners */
+    border-radius: 50% 50% 50% 50%; /* Rounded top corners */
 }
 
 .container {
