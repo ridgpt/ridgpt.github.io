@@ -167,7 +167,7 @@ button:active {
     margin-top: 20px;
     margin-bottom: 20px;
     font-weight: bold;
-    font-size: 0.9em;
+    font-size: 1.1em;
     min-height: 30px;
     transition: opacity 0.5s ease, transform 0.5s ease;
     opacity: 0.8;
