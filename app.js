@@ -1,7 +1,7 @@
 async function loadDataset() {
     const response = await fetch('dataset.json');
     if (!response.ok) {
-        throw new Error("Failed to load dataset");
+        throw new Error("Failed to load dataset.");
     }
     return await response.json();
 }
@@ -59,7 +59,7 @@ async function trainModel(model, trainingData) {
     });
 
     await model.fit(xs, ys, {
-        epochs: 50,
+        epochs: 100,
         validationSplit: 0.2, // Use 20% of the data for validation
         callbacks: [earlyStopping]
     });
