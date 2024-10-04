@@ -53,7 +53,17 @@ async function trainModel(model, trainingData) {
     const xs = tf.tensor2d(trainingData.map(item => item.encoded));
     const ys = tf.tensor2d(trainingData.map(item => item.label), [trainingData.length, 1]);
 
-    await model.fit(xs, ys, { epochs: 50 });
+    const earlyStopping = tf.callbacks.earlyStopping({
+        monitor: 'val_loss', // Monitor the validation loss
+        patience: 10,        // Number of epochs to wait before stopping
+        restoreBestWeights: true // Restore model weights from the epoch with the best value of the monitored quantity
+    });
+
+    await model.fit(xs, ys, {
+        epochs: 50,
+        validationSplit: 0.2, // Use 20% of the training data for validation
+        callbacks: [earlyStopping] // Add early stopping callback
+    });
 }
 
 async function analyzeContent(model, vocab, text) {
