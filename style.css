@@ -187,7 +187,9 @@ button:active {
 }
 
 .small {
-    font-size: 0.7em;
+    font-size: 0.4em;
+    margin-bottom: 0px;
+    font-style: italic;
 }
 
 .textarea-container {
