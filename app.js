@@ -55,11 +55,11 @@ async function trainModel(model, trainingData) {
 
     const earlyStopping = tf.callbacks.earlyStopping({
         monitor: 'val_loss', // Monitor validation loss
-        patience: 5,         // Number of epochs with no improvement after which training will be stopped
+        patience: 10,         // Number of epochs with no improvement after which training will be stopped
     });
 
     await model.fit(xs, ys, {
-        epochs: 50,
+        epochs: 100,
         validationSplit: 0.2, // Use 20% of the data for validation
         callbacks: [earlyStopping]
     });
