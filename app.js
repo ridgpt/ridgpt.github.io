@@ -54,15 +54,14 @@ async function trainModel(model, trainingData) {
     const ys = tf.tensor2d(trainingData.map(item => item.label), [trainingData.length, 1]);
 
     const earlyStopping = tf.callbacks.earlyStopping({
-        monitor: 'val_loss', // Monitor the validation loss
-        patience: 10,        // Number of epochs to wait before stopping
-        restoreBestWeights: true // Restore model weights from the epoch with the best value of the monitored quantity
+        monitor: 'val_loss', // Monitor validation loss
+        patience: 5,         // Number of epochs with no improvement after which training will be stopped
     });
 
     await model.fit(xs, ys, {
         epochs: 50,
-        validationSplit: 0.2, // Use 20% of the training data for validation
-        callbacks: [earlyStopping] // Add early stopping callback
+        validationSplit: 0.2, // Use 20% of the data for validation
+        callbacks: [earlyStopping]
     });
 }
 
