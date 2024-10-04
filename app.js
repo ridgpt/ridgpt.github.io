@@ -148,7 +148,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
             This content was ${analysisResult.text} 
             <hr>
             <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i>
-
+     <br><br>
             <span style="color: #34C759;">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i>
         `;
         resultElement.style.display = 'block';
