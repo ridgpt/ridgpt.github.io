@@ -9,6 +9,13 @@
     --shadow: rgba(255, 255, 255, 0.1);
 }
 
+/* Fallbacks for CSS Variables */
+body {
+    background: #f0f0f5; /* Fallback for background */
+    color: #333333; /* Fallback for text color */
+}
+
+/* Global Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -30,6 +37,8 @@ body {
     text-align: center;
     animation: fadeIn 1s ease-in-out; /* Fade and zoom-in animation */
     overflow: auto;
+    display: flex; /* Added for flexbox support */
+    flex-direction: column; /* Added for vertical alignment */
 }
 
 hr {
@@ -39,17 +48,17 @@ hr {
     border-radius: 8px;
     margin-top: 20px; 
     margin-bottom: 20px;
-    }
+}
 
 /* Loader styles with gradient and border-radius for the top corners */
 #loader {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-     background:linear-gradient(var(--primary-color), var(--secondary-color));
-  /* Show only 10px from the border */
-  -webkit-mask:radial-gradient(farthest-side,#0000 calc(100% - 7px),#fff 0);
-          mask:radial-gradient(farthest-side,#0000 calc(100% - 7px),#fff 0);
+    background: linear-gradient(var(--primary-color), var(--secondary-color));
+    /* Show only 10px from the border */
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#fff 0);
+    mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#fff 0);
 
     animation: fadeIn 1s ease-in-out, spin 1s linear infinite; /* Spinning animation & fade-in */
     margin: 20px auto; /* Center the loader */
@@ -96,22 +105,22 @@ h6 {
 }
 
 .header {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  animation: slideDown 0.5s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideDown 0.5s ease-out;
 }
 
 .logo {
-  width: 50px;
-  margin-top: 20px;
-  height: 50px;
-  float: left;
+    width: 50px;
+    margin-top: 20px;
+    height: 50px;
+    float: left;
 }
 
 .headtxt {
-  padding-left: 20px;
-  float: left;
+    padding-left: 20px;
+    float: left;
 }
 
 a {
@@ -135,8 +144,8 @@ textarea {
     opacity: 0.9;
     transition: border-color 0.3s, transform 0.3s;
     box-sizing: border-box; /* Include padding and border in the element's total width */
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+    -webkit-transition: border-color 0.3s, transform 0.3s; /* Safari */
+    transition: border-color 0.3s, transform 0.3s;
     transform: translateY(0);
 }
 
@@ -167,8 +176,8 @@ button {
     position: relative;
     overflow: hidden;
     transition: background-image 0.3s, transform 0.2s;
-    -webkit-transition-duration: 0.4s; /* Safari */
-    transition-duration: 0.4s;
+    -webkit-transition: background-image 0.3s, transform 0.2s; /* Safari */
+    transition: background-image 0.3s, transform 0.2s;
 }
 
 button:hover {
@@ -258,4 +267,20 @@ button:active {
 @keyframes fadeOut {
     from { opacity: 1; }
     to { opacity: 0; }
+}
+
+/* Vendor Prefixes for Flexbox Compatibility */
+.header {
+    display: -webkit-box; /* Old Safari */
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -webkit-box-align: center; /* Old Safari */
+    -ms-flex-align: center; /* IE 10 */
+    align-items: center;
+    justify-content: center;
+}
+
+/* General reset for older browsers */
+html {
+    -ms-text-size-adjust: 100%; /* IE */
 }
