@@ -170,6 +170,7 @@ button:active {
 }
 
 #result {
+    display: none; /* Hide initially */
     text-align: left;
     margin-top: 20px;
     margin-bottom: 20px;
