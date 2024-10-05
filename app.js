@@ -122,7 +122,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
     }
 
     loader.style.display = 'block';
-    resultElement.style.display = 'none';
+    resultElement.style.display = 'none'; // Hide result element initially
 
     try {
         const dataset = await loadDataset();
@@ -154,12 +154,19 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
             <span class="reshed">|</span> 
             <span style="color: #34C759;">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i>
         `;
-        resultElement.style.display = 'block';
+
+        // Only display result element if analysisResult is valid
+        if (analysisResult) {
+            resultElement.style.display = 'block';
+        } else {
+            resultElement.style.display = 'none'; // Hide if no valid result
+        }
     } catch (error) {
         console.error(error);
         alert("An error occurred. Check the console for details.");
         loader.style.display = 'none';
-    } 
+        resultElement.style.display = 'none'; // Ensure no space under button if error occurs
+    }
 });
 
 // Event listener for retraining the model
