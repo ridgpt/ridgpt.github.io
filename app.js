@@ -171,8 +171,7 @@ async function retrainChecker(button) {
 
     // Change button text to "Refinement In Progress" while retraining
     const originalButtonText = button.innerHTML; 
-    button.innerHTML = 'Refinement In Progress <i class="fa-regular fa-circle"></i> 
-    ';
+    button.innerHTML = 'Refinement In Progress <i class="fa-regular fa-circle"></i>';
     button.disabled = true; // Disable button during retraining to prevent multiple clicks
 
     try {
