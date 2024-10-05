@@ -98,7 +98,7 @@ async function retrainModel(newDataset) {
     try {
         model = await loadModel();
     } catch (error) {
-        console.error("Failed to load content checker, creating new model:", error);
+        console.error("Failed to load content checker, attempting to refine:", error);
         model = createModel([40]);
     }
 
@@ -147,7 +147,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
     <h6 class="small">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6>
 </button>
             <h6 class="reshed" style="margin-bottom: 0px">Results <i class="fa-solid fa-chevron-down"></i></h6>
-            <h6 class="reshed" style="font-size:0.7em; margin-top: 0px;">Results may not always be accurate. <i class="fa-solid fa-triangle-exclamation"></i></h6>
+            <h6 class="reshed" style="font-size:0.7em; margin-top: 0px;">Results may not always be accurate. Never use these results to make decisions on someone's academic standing or career. <i class="fa-solid fa-triangle-exclamation"></i></h6>
             This content was ${analysisResult.text}
             <hr>
             <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i> 
