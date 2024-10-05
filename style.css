@@ -135,6 +135,7 @@ textarea {
     box-sizing: border-box; /* Include padding and border in the element's total width */
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    transform: translateY(0);
 }
 
 textarea::placeholder {
@@ -147,6 +148,7 @@ textarea:focus {
     border-radius: 10px;
     border: 2px solid transparent;
     outline: none;
+    transform: translateY(-2px);
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
