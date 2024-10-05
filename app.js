@@ -162,17 +162,27 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
 // Event listener for retraining the model
 document.addEventListener('click', function (event) {
     if (event.target && event.target.id === 'retrainBtn') {
-        retrainChecker();
+        retrainChecker(event.target); // Pass the clicked button to retrainChecker function
     }
 });
 
-async function retrainChecker() {
+async function retrainChecker(button) {
     const newDataset = await loadDataset();
+
+    // Change button text to "Refining Content Checker..." while retraining
+    const originalButtonText = button.innerHTML; 
+    button.innerHTML = 'Refining Content Checker… <i class="fa-solid fa-spinner fa-spin"></i>';
+    button.disabled = true; // Disable button during retraining to prevent multiple clicks
+
     try {
         await retrainModel(newDataset);
         alert("Content checker successfully refined.");
     } catch (error) {
         console.error("Error while refining the content checker:", error);
         alert("Failed to refine the content checker. Check the console for details.");
+    } finally {
+        // Restore button text and re-enable it after retraining
+        button.innerHTML = originalButtonText;
+        button.disabled = false;
     }
 }
