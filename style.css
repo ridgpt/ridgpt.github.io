@@ -63,7 +63,10 @@ hr {
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
     backdrop-filter: blur(10px); /* Glass effect */
-    border: 1px solid transparent;
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+               linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+    border: 2px solid transparent;
     width: 90%;
     margin: auto;
     max-width: 480px;
