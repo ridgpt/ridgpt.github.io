@@ -223,7 +223,7 @@ button:active {
 
 #charCount {
     position: absolute;
-    bottom: 10px; /* Adjust as necessary */
+    bottom: -10px; /* Adjust as necessary */
     right: 10px; /* Adjust as necessary */
     font-size: 0.7rem; /* Adjust font size as necessary */
     font-weight: bold;
