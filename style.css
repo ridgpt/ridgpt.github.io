@@ -72,7 +72,7 @@ hr {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-top: 20px;
     margin-bottom: 0px;
     background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
@@ -81,7 +81,7 @@ h1 {
 }
 
 h6 {
-    font-size: 1.2em;
+    font-size: 1.2rem;
     margin-bottom: 20px;
     opacity: 0.8;
 }
@@ -121,7 +121,7 @@ textarea {
     border-radius: 10px;
     border: 2px solid transparent;
     resize: none;
-    font-size: 1em;
+    font-size: 1rem;
     color: var(--text-color);
     opacity: 0.9;
     transition: border-color 0.3s, transform 0.3s;
@@ -151,7 +151,7 @@ button {
     border: none;
     border-radius: 10px; /* Rounded corners */
     color: #ffffff; /* White text for button */
-    font-size: 1.1em;
+    font-size: 1.1rem;
     cursor: pointer;
     position: relative;
     overflow: hidden;
@@ -176,7 +176,7 @@ button:active {
     margin-top: 20px;
     margin-bottom: 0px;
     font-weight: bold;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     color: rgba(51, 51, 51, 0.8);
     min-height: 30px;
     transition: opacity 0.5s ease, transform 0.5s ease;
@@ -185,7 +185,7 @@ button:active {
 
 .reshed {
     text-align: left;
-    font-size: 1.2em;
+    font-size: 1.2rem;
     background: linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
@@ -204,7 +204,7 @@ button:active {
 }
 
 .small {
-    font-size: 0.7em;
+    font-size: 0.7rem;
     margin-bottom: 0px;
 }
 
