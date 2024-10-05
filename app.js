@@ -145,16 +145,20 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         // Hide loader and show the result with percentages
         loader.style.display = 'none';
         resultElement.innerHTML = `
-         <button id="retrainBtn">Reload Content Checker <i class="fa-solid fa-arrows-rotate"></i> <h6 class="small">Only reload the content checker if you believe that the given result is 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6></button>
+         <button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px;">Reload Content Checker <i class="fa-solid fa-arrows-rotate"></i> <h6 class="small">Only reload the content checker if you believe that the given result is 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6></button>
         
                     <h6 class="reshed" style="margin-bottom: 0px">Results <i class="fa-solid fa-chevron-down"></i></h6>
                     <h6 class="reshed" style="font-size:0.7em; margin-top: 0px;">Results may not always be accurate. <i class="fa-solid fa-triangle-exclamation"></i></h6>
+                    
+                <span style="opacity: 0.8;>
                     
             This content was ${analysisResult.text} 
             <hr>
             <span style="color: #FF0000; margin-bottom: 20px;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i>
 
             <span style="margin-top: 20px; color: #34C759;">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i>
+            
+            </span>
         `;
         resultElement.style.display = 'block';
     } catch (error) {
