@@ -35,7 +35,7 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    animation: fadeIn 1s ease-in-out; /* Fade and zoom-in animation */
+    animation: fadeIn 1s ease-in-out, fadeOut 1s ease-in-out; /* Added fadeOut animation */
     overflow: auto;
     display: flex; /* Added for flexbox support */
     flex-direction: column; /* Added for vertical alignment */
@@ -48,6 +48,7 @@ hr {
     border-radius: 8px;
     margin-top: 20px; 
     margin-bottom: 20px;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 /* Loader styles with gradient and border-radius for the top corners */
@@ -60,7 +61,7 @@ hr {
     -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#fff 0);
     mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#fff 0);
 
-    animation: fadeIn 1s ease-in-out, spin 1s linear infinite; /* Spinning animation & fade-in */
+    animation: fadeIn 1s ease-in-out, spin 1s linear infinite, fadeOut 1s ease-in-out; /* Added fadeOut animation */
     margin: 20px auto; /* Center the loader */
     display: none; /* Initially hidden */
     margin-bottom: 0px;
@@ -80,6 +81,7 @@ hr {
     max-width: 480px;
     padding-bottom: 20px;
     padding-top: 0px;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .gradient-icon {
@@ -87,6 +89,7 @@ hr {
     background: linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 h1 {
@@ -96,19 +99,25 @@ h1 {
     background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 h6 {
     font-size: 1.2rem;
     margin-bottom: 20px;
     opacity: 0.8;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .header {
+    display: -webkit-box; /* Old Safari */
+    display: -ms-flexbox; /* IE 10 */
     display: flex;
+    -webkit-box-align: center; /* Old Safari */
+    -ms-flex-align: center; /* IE 10 */
     align-items: center;
     justify-content: center;
-    animation: slideDown 0.5s ease-out;
+    animation: slideDown 0.5s ease-out, fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .logo {
@@ -116,11 +125,13 @@ h6 {
     margin-top: 20px;
     height: 50px;
     float: left;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .headtxt {
     padding-left: 20px;
     float: left;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 a {
@@ -128,6 +139,7 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
     text-decoration: none;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 textarea {
@@ -147,10 +159,12 @@ textarea {
     -webkit-transition: border-color 0.3s, transform 0.3s; /* Safari */
     transition: border-color 0.3s, transform 0.3s;
     transform: translateY(0);
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 textarea::placeholder {
     color: #999; /* Light gray for placeholder */
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 textarea:focus {
@@ -161,6 +175,7 @@ textarea:focus {
     outline: none;
     transform: translateY(-2px);
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 button {
@@ -178,16 +193,19 @@ button {
     transition: background-image 0.3s, transform 0.2s;
     -webkit-transition: background-image 0.3s, transform 0.2s; /* Safari */
     transition: background-image 0.3s, transform 0.2s;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 button:hover {
     background-image: linear-gradient(-145deg, var(--primary-color), var(--secondary-color)); /* Gradient for hover */
     transform: translateY(-2px);
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 button:active {
     transform: translateY(0);
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 #result {
@@ -200,7 +218,7 @@ button:active {
     color: rgba(51, 51, 51, 0.8);
     min-height: 30px;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    animation: slideDown 0.5s ease-out;
+    animation: slideDown 0.5s ease-out, fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .reshed {
@@ -209,27 +227,32 @@ button:active {
     background: linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .info-section {
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 0.7rem;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .copyright {
     margin-top: 0px;
     font-size: 0.7rem;
     margin-bottom: 0px;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .small {
     font-size: 0.7rem;
     margin-bottom: 0px;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 .textarea-container {
     position: relative;
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 #charCount {
@@ -241,6 +264,7 @@ button:active {
     background: linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
+    animation: fadeOut 1s ease-in-out; /* Added fadeOut animation */
 }
 
 /* Animations */
