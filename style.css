@@ -187,7 +187,7 @@ button:active {
     color: rgba(51, 51, 51, 0.8);
     min-height: 30px;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    animation: fadeIn 1s ease-in-out; /* Fade-in */
+    animation: slideDown 0.5s ease-out;
 }
 
 .reshed {
