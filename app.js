@@ -146,7 +146,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
     Refine Content Checker <i class="fa-solid fa-rotate-right"></i>
     <h6 class="small">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6>
 </button>
-            <h6 class="reshed" style="margin-bottom: 0px">Results <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
+            <h6 class="reshed" style="margin-bottom: 0px; border-bottom: 5px solid transparent; border-image: linear-gradient(to right, #7228fe  0%,#7228fe  60%, #4ea2f5 61%, #4ea2f5 100%); border-image-slice: 1;">Results <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
             <h6 class="reshed" style="font-size:0.7rem; margin-top: 0px;">Results may not always be accurate. Never use these results to make decisions on someone's academic standing or career. <i class="fa-solid fa-triangle-exclamation"></i></h6>
            <i class="fa-solid fa-chevron-right gradient-icon"></i> This content was ${analysisResult.text}
             <hr width="50%">
