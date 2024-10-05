@@ -159,7 +159,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         console.error(error);
         alert("An error occurred. Check the console for details.");
         loader.style.display = 'none';
-    }
+    } 
 });
 
 // Event listener for retraining the model
