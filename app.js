@@ -142,7 +142,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
 
         loader.style.display = 'none';
         resultElement.innerHTML = `
-<button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px; font-size: 1.1rem;">
+<button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px;">
     Refine Content Checker <i class="fa-solid fa-rotate-right"></i>
     <h6 class="small">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6>
 </button>
