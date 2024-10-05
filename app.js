@@ -143,7 +143,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         loader.style.display = 'none';
         resultElement.innerHTML = `
 <button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px; font-size: 0.9em;">
-    Refine Content Checker <i class="fa-solid fa-arrows-rotate"></i>
+    Refine Content Checker <i class="fa-solid fa-rotate-right"></i>
     <h6 class="small">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6>
 </button>
             <h6 class="reshed" style="margin-bottom: 0px">Results <i class="fa-solid fa-chevron-down"></i></h6>
@@ -174,7 +174,7 @@ async function retrainChecker(button) {
 
     // Change button text to "Refinement In Progress" while retraining
     const originalButtonText = button.innerHTML; 
-    button.innerHTML = 'Refinement In Progress <i class="fa-regular fa-circle"></i>';
+    button.innerHTML = 'Refinement In Progress <i class="fa-solid fa-rotate-right fa-spin"></i>';
     button.disabled = true; // Disable button during retraining to prevent multiple clicks
 
     try {
