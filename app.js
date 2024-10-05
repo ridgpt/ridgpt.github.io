@@ -146,6 +146,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         loader.style.display = 'none';
         resultElement.innerHTML = `
                     <h6 class="reshed">Results <i class="fa-solid fa-chevron-down"></i></h6>
+                    <h6 class="reshed" style="font-size:0.7em; margin-top: 0px;">Results may not always be accurate. <i class="fa-solid fa-triangle-exclamation"></i></h6>
                     
             This content was ${analysisResult.text} 
             <hr>
