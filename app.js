@@ -142,12 +142,12 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
 
         loader.style.display = 'none';
         resultElement.innerHTML = `
-<button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px; font-size: 0.9em;">
+<button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px; font-size: 1.1rem;">
     Refine Content Checker <i class="fa-solid fa-rotate-right"></i>
     <h6 class="small">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6>
 </button>
             <h6 class="reshed" style="margin-bottom: 0px">Results <i class="fa-solid fa-chevron-down"></i></h6>
-            <h6 class="reshed" style="font-size:0.7em; margin-top: 0px;">Results may not always be accurate. Never use these results to make decisions on someone's academic standing or career. <i class="fa-solid fa-triangle-exclamation"></i></h6>
+            <h6 class="reshed" style="font-size:0.7rem; margin-top: 0px;">Results may not always be accurate. Never use these results to make decisions on someone's academic standing or career. <i class="fa-solid fa-triangle-exclamation"></i></h6>
             This content was ${analysisResult.text}
             <hr>
             <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i> 
