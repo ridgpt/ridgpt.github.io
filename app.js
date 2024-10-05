@@ -153,9 +153,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
                     
             This content was ${analysisResult.text} 
             <hr>
-            <span style="color: #FF0000; margin-bottom: 20px;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i>
-
-            <span style="margin-top: 20px; color: #34C759;">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i>
+            <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i> <span class="reshed">•</span> <span style="color: #34C759;">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i>
         `;
         resultElement.style.display = 'block';
     } catch (error) {
