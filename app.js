@@ -169,9 +169,11 @@ document.addEventListener('click', function (event) {
 async function retrainChecker(button) {
     const newDataset = await loadDataset();
 
-    // Change button text to "Refining Content Checker..." while retraining
+    // Change button text to "Refinement In Progress" while retraining
     const originalButtonText = button.innerHTML; 
-    button.innerHTML = 'Refinement In Progress <i class="fa-solid fa-spinner fa-spin"></i>';
+    button.innerHTML = 'Refinement In Progress <i class="fa-regular fa-circle"></i>
+    <h6 class="small">An attempt to refine the content checker is currently in progress. <i class="fa-solid fa-circle-info"></i></h6>
+    ';
     button.disabled = true; // Disable button during retraining to prevent multiple clicks
 
     try {
