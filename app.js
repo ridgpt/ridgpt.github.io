@@ -142,7 +142,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
 
         loader.style.display = 'none';
         resultElement.innerHTML = `
-            <button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px;">Reload Content Checker <i class="fa-solid fa-arrows-rotate"></i><h6 class="small">Only reload the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6></button>
+            <button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px;">Refine Content Checker <i class="fa-solid fa-arrows-rotate"></i><h6 class="small">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6></button>
             <h6 class="reshed" style="margin-bottom: 0px">Results <i class="fa-solid fa-chevron-down"></i></h6>
             <h6 class="reshed" style="font-size:0.7em; margin-top: 0px;">Results may not always be accurate. <i class="fa-solid fa-triangle-exclamation"></i></h6>
             This content was ${analysisResult.text}
@@ -170,9 +170,9 @@ async function retrainChecker() {
     const newDataset = await loadDataset();
     try {
         await retrainModel(newDataset);
-        alert("Content checker successfully reloaded.");
+        alert("Content checker successfully refined.");
     } catch (error) {
-        console.error("Error while reloading the content checker:", error);
-        alert("Failed to reload the content checker. Check the console for details.");
+        console.error("Error while refining the content checker:", error);
+        alert("Failed to refine the content checker. Check the console for details.");
     }
 }
