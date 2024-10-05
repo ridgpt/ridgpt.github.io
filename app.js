@@ -150,9 +150,9 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
             <h6 class="reshed" style="font-size:0.7rem; margin-top: 0px;">Results may not always be accurate. Never use these results to make decisions on someone's academic standing or career. <i class="fa-solid fa-triangle-exclamation"></i></h6>
             This content was ${analysisResult.text}
             <hr>
-            <h6><span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i></h6>
+            <h6><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i></h6>
 
-            <h6 style="margin-bottom: 0px;"><span style="color: #34C759; ">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i></h6>
+            <h6 style="margin-bottom: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="color: #34C759; ">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i></h6>
         `;
 
         // Only display result element if analysisResult is valid
