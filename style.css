@@ -293,6 +293,10 @@ button:active {
     to { opacity: 0; }
 }
 
+.fade-out {
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
 /* Vendor Prefixes for Flexbox Compatibility */
 .header {
     display: -webkit-box; /* Old Safari */
