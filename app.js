@@ -142,7 +142,10 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
 
         loader.style.display = 'none';
         resultElement.innerHTML = `
-            <button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px;">Refine Content Checker <i class="fa-solid fa-arrows-rotate"></i><h6 class="small">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6></button>
+<button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px; width: 100%; padding: 15px; background-image: linear-gradient(145deg, var(--primary-color), var(--secondary-color)); border: none; border-radius: 10px; color: #ffffff; font-size: 1.1em; cursor: pointer; transition: background-image 0.3s, transform 0.2s;">
+    Refine Content Checker <i class="fa-solid fa-arrows-rotate"></i>
+    <h6 class="small">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6>
+</button>
             <h6 class="reshed" style="margin-bottom: 0px">Results <i class="fa-solid fa-chevron-down"></i></h6>
             <h6 class="reshed" style="font-size:0.7em; margin-top: 0px;">Results may not always be accurate. <i class="fa-solid fa-triangle-exclamation"></i></h6>
             This content was ${analysisResult.text}
