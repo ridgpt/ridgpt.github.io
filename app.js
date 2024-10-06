@@ -98,7 +98,7 @@ async function retrainModel(newDataset) {
     try {
         model = await loadModel();
     } catch (error) {
-        console.error("Failed to load content checker, attempting to refine:", error);
+        console.error("Content checker failed to load, refining:", error);
         model = createModel([40]);
     }
 
@@ -133,7 +133,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         try {
             model = await loadModel();
         } catch (error) {
-            console.error("Model loading failed, creating a new one.");
+            console.error("Content checker failed to load, refining.");
             model = createModel([40]);
             await trainModel(model, encodedData);
         }
