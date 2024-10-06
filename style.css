@@ -9,7 +9,11 @@
     --shadow: rgba(255, 255, 255, 0.1);
 }
 
-
+/* Fallbacks for CSS Variables */
+body {
+    background: #f0f0f5; /* Fallback for background */
+    color: #333333; /* Fallback for text color */
+}
 
 /* Global Reset */
 * {
