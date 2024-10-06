@@ -146,11 +146,11 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
     Refine Content Checker <i class="fa-solid fa-rotate-right"></i>
     <h6 class="small" style="margin-top:0px;">Only attempt to refine the content checker when delayed results and/or inaccurate results become frequent. <i class="fa-solid fa-circle-info"></i></h6>
 </button>
-            <h6 class="reshed" style="margin-bottom: 0px;">Involvement-Based Results <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
+            <h6 class="reshed" style="margin-bottom: 20px;">Involvement-Based Results <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
 
            <i class="fa-solid fa-chevron-right gradient-icon"></i> This content was ${analysisResult.text}
             <hr>
-            <h6 class="reshed" style="margin-bottom: 0px;">Summary-Based Results <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
+            <h6 class="reshed" style="margin-bottom: 20px;">Summary-Based Results <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
             
             <h6 style="opacity: 1;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="color: #FF0000;">AI</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i></h6>
 
