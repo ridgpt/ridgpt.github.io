@@ -163,6 +163,16 @@ textarea:focus {
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
+textarea:hover {
+    background: linear-gradient(#ffffff, #ffffff) padding-box,
+               linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
 button {
     width: 100%;
     padding: 15px;
