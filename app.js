@@ -1,7 +1,7 @@
 async function loadDataset() {
     const response = await fetch('dataset.json');
     if (!response.ok) {
-        throw new Error("Failed to load dataset.");
+        throw new Error("Failed to load the dataset.");
     }
     return await response.json();
 }
@@ -144,10 +144,10 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         resultElement.innerHTML = `
 <button id="retrainBtn" style="margin-top: 0px; margin-bottom: 20px;">
     Refine Content Checker <i class="fa-solid fa-rotate-right"></i>
-    <h6 class="small" style="margin-top:0px;">Only attempt to refine the content checker if you believe that the given results are 100% inaccurate. <i class="fa-solid fa-circle-info"></i></h6>
+    <h6 class="small" style="margin-top:0px;">Only attempt to refine the content checker when delayed results and inaccuracies become frequent. <i class="fa-solid fa-circle-info"></i></h6>
 </button>
             <h6 class="reshed" style="margin-bottom: 0px;">Results <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
-            <h6 class="reshed" style="font-size:0.7rem; margin-top: 0px;">Results may not always be accurate. Never use these results to make decisions on someone's academic standing or career. <i class="fa-solid fa-triangle-exclamation"></i></h6>
+            <h6 class="reshed" style="font-size:0.7rem; margin-top: 0px;">Never use these results to make decisions on someone's academic standing or career, as these results may not always be accurate. <i class="fa-solid fa-triangle-exclamation"></i></h6>
            <i class="fa-solid fa-chevron-right gradient-icon"></i> This content was ${analysisResult.text}
             <hr width="50%">
             <h6 style="opacity: 1;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="color: #FF0000;">Artificial Intelligence (AI)</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i></h6>
