@@ -203,17 +203,6 @@ button:active {
     animation: slideDown 0.5s ease-out;
 }
 
-#result::after {
-    content: '|';
-    animation: blink 1s step-start infinite;
-}
-
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
-
 .reshed {
     text-align: left;
     font-size: 1.4rem;
