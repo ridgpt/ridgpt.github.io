@@ -208,7 +208,7 @@ button:active {
     margin-bottom: 0px;
     font-weight: bold;
     font-size: 1.2rem;
-    color: rgba(51, 51, 51, 0.8);
+    color: rgba(51, 51, 51);
     min-height: 30px;
     transition: opacity 0.5s ease, transform 0.5s ease;
     animation: slideDown 0.5s ease-out;
