@@ -151,13 +151,13 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
         
                         <h6 class="reshed" style="font-size:0.7rem; margin-top: 20px;">Involvements  <i class="fa-solid fa-hands"></i></h6>
             
-            <h6 style="opacity: 1; margin-top: 20px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="color: #FF0000;">AI</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i></h6>
+            <h6 style="margin-top: 20px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="color: #FF0000;">AI</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i></h6>
 
-            <h6 style="margin-bottom: 0px; opacity: 1;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="color: #34C759; ">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i></h6>
+            <h6 style="margin-bottom: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="color: #34C759; ">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i></h6>
 
                         <h6 class="reshed" style="font-size:0.7rem; margin-top: 20px;">Summary  <i class="fa-solid fa-list"></i></h6>
 
-           <i class="fa-solid fa-chevron-right gradient-icon"></i> This content was ${analysisResult.text}
+           <h6><i class="fa-solid fa-chevron-right gradient-icon"></i> This content was ${analysisResult.text}</h6>
         `;
 
         // Only display result element if analysisResult is valid
