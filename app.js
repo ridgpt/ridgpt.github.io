@@ -155,7 +155,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
 
             <h6 style="margin-bottom: 0px; opacity: 1;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="opacity: 0.8;"> <span style="color: rgba(0, 209, 0, 1);">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i></span></h6>
 
-                        <h6 class="reshed" style="font-size:0.7rem; margin-top: 20px; margin-bottom: 0px;">Summary  <i class="fa-solid fa-list"></i></h6>
+                        <h6 class="reshed" style="font-size:0.7rem; margin-top: 20px; margin-bottom: 20px;">Summary  <i class="fa-solid fa-list"></i></h6>
 
             <h6 style="opacity: 1;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="opacity: 0.8;"> This content was ${analysisResult.text}</span></h6>
         `;
