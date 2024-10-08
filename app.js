@@ -153,7 +153,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
             
             <h6 style="margin-top: 20px; opacity: 1;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="opacity: 0.8;"><span style="color: rgba(255, 0, 0, 1);">AI</span> Involvement: ${analysisResult.aiPercentage}% <i class="fa-solid fa-robot"></i></span></h6>
 
-            <h6 style="margin-bottom: 0px; opacity: 1;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="opacity: 0.8;"> <span style="color: rgba(0, 209, 0, 1);">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i></span></h6>
+            <h6 style="margin-bottom: 0px; opacity: 1;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="opacity: 0.8;"> <span style="color: rgba(0, 209, 0, 0.8);">Human</span> Involvement: ${analysisResult.humanPercentage}% <i class="fa-solid fa-brain"></i></span></h6>
 
                         <h6 class="reshed" style="font-size:0.7rem; margin-top: 20px;">Summary  <i class="fa-solid fa-list"></i></h6>
 
