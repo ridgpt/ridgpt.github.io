@@ -84,10 +84,10 @@ hr {
 
 .gradient-icon {
     font-size: 1.4rem; /* Adjust icon size */
-    opacity: 1;
     background: linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
+    color: rgba(51, 51, 0.8);
 }
 
 h1 {
@@ -208,7 +208,6 @@ button:active {
     margin-bottom: 0px;
     font-weight: bold;
     font-size: 1.2rem;
-    color: rgba(51, 51, 51);
     min-height: 30px;
     transition: opacity 0.5s ease, transform 0.5s ease;
     animation: slideDown 0.5s ease-out;
