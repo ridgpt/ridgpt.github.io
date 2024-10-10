@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Disconnected Message</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #d9d9d9; /* Roblox background color */
+            font-family: Arial, sans-serif;
+        }
+
+        .modal {
+            background-color: #f2f2f2; /* Light gray background */
+            border: 2px solid #4a4a4a; /* Dark gray border */
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            width: 320px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .modal-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333; /* Darker color for the header */
+            margin-bottom: 10px;
+        }
+
+        .modal-body {
+            font-size: 14px;
+            color: #555; /* Slightly lighter color for the body text */
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .modal-button {
+            background-color: #e6e6e6; /* Light gray button */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .modal-button:hover {
+            background-color: #d4d4d4; /* Darker gray when hovering */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="modal">
+        <div class="modal-header">Disconnected</div>
+        <div class="modal-body">
+            Account login detected from an unauthorized device. ROBLOX will forcibly log you out from the current session. 
+            To reconnect, please log off the unauthorized device.
+        </div>
+        <button class="modal-button">Leave</button>
+    </div>
+
+</body>
+</html>
