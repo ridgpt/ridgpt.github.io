@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker Terminal</title>
+    <style>
+        body, html {
+            background-color: black;
+            color: #00ff00;
+            font-family: 'Courier New', Courier, monospace;
+            overflow: hidden;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #terminal {
+            background-color: #000;
+            border: 2px solid #00ff00;
+            padding: 20px;
+            width: 80%;
+            max-width: 800px;
+            height: 60%;
+            overflow-y: auto;
+            box-shadow: 0 0 10px #00ff00;
+        }
+
+        .typewriter-text {
+            white-space: pre-wrap;
+            animation: blinkCursor 0.8s infinite;
+        }
+
+        @keyframes blinkCursor {
+            0% { border-right: 2px solid #00ff00; }
+            50% { border-right: 2px solid transparent; }
+            100% { border-right: 2px solid #00ff00; }
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        <div class="typewriter-text" id="output"></div>
+    </div>
+
+    <script>
+        const output = document.getElementById('output');
+        const messages = [
+            "Initializing...\n",
+            "Accessing mainframe...\n",
+            "Bypassing security protocols...\n",
+            "Attempting to retrieve location...\n\n"
+        ];
+
+        // Function to simulate typing effect
+        function typeMessage(message, index, callback) {
+            if (index < message.length) {
+                output.innerHTML += message.charAt(index);
+                setTimeout(() => typeMessage(message, index + 1, callback), 50);
+            } else if (callback) {
+                callback();
+            }
+        }
+
+        // Function to fetch the user's location
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                output.innerHTML += "Geolocation is not supported by your browser.\n";
+            }
+        }
+
+        // Display the user's approximate location
+        function showPosition(position) {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            output.innerHTML += `Location found:\nLatitude: ${lat}\nLongitude: ${lon}\n`;
+            output.innerHTML += "You can't hide...\n";
+        }
+
+        // Handle errors in getting the location
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    output.innerHTML += "Location access denied. Are you hiding?\n";
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    output.innerHTML += "Location information is unavailable.\n";
+                    break;
+                case error.TIMEOUT:
+                    output.innerHTML += "Location request timed out.\n";
+                    break;
+                default:
+                    output.innerHTML += "An unknown error occurred.\n";
+                    break;
+            }
+        }
+
+        // Simulate the hacker sequence and get the location
+        let delay = 0;
+        messages.forEach((msg, index) => {
+            setTimeout(() => typeMessage(msg, 0, () => {
+                if (index === messages.length - 1) getLocation();
+            }), delay);
+            delay += msg.length * 50;
+        });
+    </script>
+</body>
+</html>
