@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Roblox Disconnected Message</title>
+    <title>Disconnected Message</title>
     <style>
         body, html {
             margin: 0;
@@ -14,56 +14,52 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #c7c7c7; /* Roblox background color */
+            background-color: #a7a7a7; /* Background color similar to the Roblox environment */
             font-family: Arial, sans-serif;
         }
 
         .modal {
-            background-color: #e0e0e0; /* Light gray background to match Roblox modal */
-            border: 1px solid #333333; /* Dark border around the modal */
-            border-radius: 8px;
-            width: 360px; /* Adjust width to match the image */
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-            text-align: left;
-            padding: 10px 20px;
+            background-color: #f2f3f5; /* Light gray background of the modal */
+            border: 1px solid #3c3c3c; /* Dark gray border to match the image */
+            width: 360px; /* Match the width from the image */
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Shadow effect similar to the image */
+            border-radius: 8px; /* Rounded corners for the modal */
+            text-align: center;
         }
 
         .modal-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background-color: #333333; /* Dark header background */
-            color: white; /* White text in the header */
-            padding: 8px 12px;
-            font-size: 16px;
+            background-color: #2d2d2d; /* Dark gray header background */
+            color: #ffffff; /* White text in the header */
+            padding: 10px;
+            font-size: 18px;
             font-weight: bold;
-            border-radius: 5px 5px 0 0;
+            text-align: left;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
         }
 
         .modal-body {
+            padding: 15px 20px;
             font-size: 14px;
-            color: #555555; /* Standard gray color */
-            margin: 15px 0;
-            line-height: 1.4;
+            color: #333333; /* Dark text color for better readability */
+            line-height: 1.5;
+            text-align: left;
         }
 
         .modal-button {
-            display: inline-block;
-            background-color: #f5f5f5; /* Button color to match Roblox style */
-            color: black;
-            border: none;
-            padding: 10px 40px;
-            margin: 15px 0;
-            border-radius: 3px;
-            font-size: 16px;
-            text-align: center;
+            background-color: #d6d6d6; /* Button background color similar to the image */
+            border: 1px solid #b3b3b3; /* Slightly darker border for the button */
+            padding: 8px 20px;
+            margin: 15px;
+            border-radius: 4px;
+            font-size: 14px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
 
         .modal-button:hover {
-            background-color: #dfdfdf; /* Slightly darker on hover to show interaction */
+            background-color: #c4c4c4; /* Darken button on hover */
         }
-
     </style>
 </head>
 <body>
@@ -71,7 +67,7 @@
     <div class="modal">
         <div class="modal-header">Disconnected</div>
         <div class="modal-body">
-            Account login detected from an unauthorized device. ROBLOX will forcibly log you out from the current session. 
+            Account login detected from an unauthorized device. You will be forcibly logged out from the current session. 
             To reconnect, please log off the unauthorized device.
         </div>
         <button class="modal-button">Leave</button>
