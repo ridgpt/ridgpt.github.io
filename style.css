@@ -129,6 +129,7 @@ a {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;  
     text-decoration: none;
+    opacity: 1;
 }
 
 textarea {
