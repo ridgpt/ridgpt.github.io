@@ -25,6 +25,13 @@ function createModal(deviceType, modalFileName) {
           modal.style.display = 'none';
         };
       }
+
+      // Close the modal when clicking outside the modal content
+      window.onclick = function (event) {
+        if (event.target === modal) {
+          modal.style.display = 'none';
+        }
+      };
     })
     .catch((error) => console.error('Error loading the modal content:', error));
 }
@@ -38,7 +45,6 @@ if (isAndroid) {
 } else if (isIOS) {
   createModal('ios', 'ios-modal.html');
 }
-
 
 async function loadDataset() {
     const response = await fetch('dataset.json');
