@@ -1,3 +1,27 @@
+// Show the modal if the user is on an iOS device
+function showModalForIOS() {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+        document.getElementById("iosModal").style.display = "block";
+    }
+}
+
+// Close modal when clicking on <span> (x)
+document.querySelector(".close").addEventListener("click", function() {
+    document.getElementById("iosModal").style.display = "none";
+});
+
+// Close modal when clicking anywhere outside of the modal
+window.addEventListener("click", function(event) {
+    const modal = document.getElementById("iosModal");
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+});
+
+// Show modal on page load if on iOS
+window.onload = showModalForIOS;
+
 async function loadDataset() {
     const response = await fetch('dataset.json');
     if (!response.ok) {
