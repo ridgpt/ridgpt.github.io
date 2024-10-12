@@ -15,6 +15,9 @@ function createModal(deviceType, modalFileName) {
       // Append the modal to the body
       document.body.appendChild(modal);
 
+      // Display the modal
+      modal.style.display = 'block';
+
       // Add close functionality for the modal
       const closeModalButton = modal.querySelector('.close');
       if (closeModalButton) {
@@ -35,6 +38,7 @@ if (isAndroid) {
 } else if (isIOS) {
   createModal('ios', 'ios-modal.html');
 }
+
 
 async function loadDataset() {
     const response = await fetch('dataset.json');
