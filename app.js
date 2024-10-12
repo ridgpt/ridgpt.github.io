@@ -1,26 +1,40 @@
-// Show the modal if the user is on an iOS device
-function showModalForIOS() {
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    if (isIOS) {
-        document.getElementById("iosModal").style.display = "block";
-    }
+// Function to create and display the modal based on device type
+function createModal(deviceType, modalFileName) {
+  // Fetch the modal content from the specified HTML file
+  fetch(modalFileName)
+    .then((response) => response.text())
+    .then((data) => {
+      // Create the modal container
+      const modal = document.createElement('div');
+      modal.id = `${deviceType}Modal`;
+      modal.className = 'modal';
+
+      // Insert the fetched HTML content into the modal
+      modal.innerHTML = data;
+
+      // Append the modal to the body
+      document.body.appendChild(modal);
+
+      // Add close functionality for the modal
+      const closeModalButton = modal.querySelector('.close-button');
+      if (closeModalButton) {
+        closeModalButton.onclick = function () {
+          modal.style.display = 'none';
+        };
+      }
+    })
+    .catch((error) => console.error('Error loading the modal content:', error));
 }
 
-// Close modal when clicking on <span> (x)
-document.querySelector(".close").addEventListener("click", function() {
-    document.getElementById("iosModal").style.display = "none";
-});
+// Check the device type and load the respective modal
+const isAndroid = /Android/i.test(navigator.userAgent);
+const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-// Close modal when clicking anywhere outside of the modal
-window.addEventListener("click", function(event) {
-    const modal = document.getElementById("iosModal");
-    if (event.target === modal) {
-        modal.style.display = "none";
-    }
-});
-
-// Show modal on page load if on iOS
-window.onload = showModalForIOS;
+if (isAndroid) {
+  createModal('android', 'android-modal.html');
+} else if (isIOS) {
+  createModal('ios', 'ios-modal.html');
+}
 
 async function loadDataset() {
     const response = await fetch('dataset.json');
