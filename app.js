@@ -9,8 +9,15 @@ function createModal(deviceType, modalFileName) {
       modal.id = `${deviceType}Modal`;
       modal.className = 'modal';
 
-      // Insert the fetched HTML content into the modal
-      modal.innerHTML = data;
+      // Create a container for the modal content
+      const modalContent = document.createElement('div');
+      modalContent.className = 'modal-content';
+
+      // Insert the fetched HTML content into the modal-content container
+      modalContent.innerHTML = data;
+
+      // Append the modal content to the modal container
+      modal.appendChild(modalContent);
 
       // Append the modal to the body
       document.body.appendChild(modal);
