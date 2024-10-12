@@ -16,7 +16,7 @@ function createModal(deviceType, modalFileName) {
       document.body.appendChild(modal);
 
       // Add close functionality for the modal
-      const closeModalButton = modal.querySelector('.close-button');
+      const closeModalButton = modal.querySelector('.close');
       if (closeModalButton) {
         closeModalButton.onclick = function () {
           modal.style.display = 'none';
