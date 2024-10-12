@@ -1,51 +1,51 @@
 // Function to create and display the modal based on device type
 function createModal(deviceType, modalFileName) {
-  // Fetch the modal content from the specified HTML file
-  fetch(modalFileName)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to load modal content: ${response.statusText}`);
-      }
-      return response.text();
-    })
-    .then((data) => {
-      // Create the modal container
-      const modal = document.createElement('div');
-      modal.id = `${deviceType}Modal`;
-      modal.className = 'modal';
+    // Fetch the modal content from the specified HTML file
+    fetch(modalFileName)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error(`Failed to load modal content: ${response.statusText}`);
+            }
+            return response.text();
+        })
+        .then((data) => {
+            // Create the modal container
+            const modal = document.createElement('div');
+            modal.id = `${deviceType}Modal`;
+            modal.className = 'modal';
 
-      // Create the modal content div and insert fetched HTML
-      const modalContent = document.createElement('div');
-      modalContent.className = 'modal-content';
-      modalContent.innerHTML = data.trim(); // Insert the HTML content fetched
+            // Create the modal content div and insert fetched HTML
+            const modalContent = document.createElement('div');
+            modalContent.className = 'modal-content';
+            modalContent.innerHTML = data.trim(); // Insert the HTML content fetched
 
-      // Append the modal content to the modal
-      modal.appendChild(modalContent);
+            // Append the modal content to the modal
+            modal.appendChild(modalContent);
 
-      // Append the modal to the body
-      document.body.appendChild(modal);
+            // Append the modal to the body
+            document.body.appendChild(modal);
 
-      // Display the modal
-      modal.style.display = 'block';
+            // Display the modal
+            modal.style.display = 'block';
 
-      // Add close functionality for the modal
-      const closeModalButton = modalContent.querySelector('.close');
-      if (closeModalButton) {
-        closeModalButton.onclick = function () {
-          modal.style.display = 'none';
-          document.body.removeChild(modal); // Remove modal from DOM on close
-        };
-      }
+            // Add close functionality for the modal
+            const closeModalButton = modalContent.querySelector('.close');
+            if (closeModalButton) {
+                closeModalButton.onclick = function () {
+                    modal.style.display = 'none';
+                    document.body.removeChild(modal); // Remove modal from DOM on close
+                };
+            }
 
-      // Close the modal when clicking outside the modal content
-      window.onclick = function (event) {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-          document.body.removeChild(modal); // Remove modal from DOM on close
-        }
-      };
-    })
-    .catch((error) => console.error('Error loading the modal content:', error));
+            // Close the modal when clicking outside the modal content
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                    document.body.removeChild(modal); // Remove modal from DOM on close
+                }
+            };
+        })
+        .catch((error) => console.error('Error loading the modal content:', error));
 }
 
 // Check the device type and load the respective modal
@@ -53,9 +53,9 @@ const isAndroid = /Android/i.test(navigator.userAgent);
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 if (isAndroid) {
-  createModal('android', 'android-modal.html');
+    createModal('android', 'android-modal.html');
 } else if (isIOS) {
-  createModal('ios', 'ios-modal.html');
+    createModal('ios', 'ios-modal.html');
 }
 
 async function loadDataset() {
