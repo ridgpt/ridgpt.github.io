@@ -2,21 +2,24 @@
 function createModal(deviceType, modalFileName) {
   // Fetch the modal content from the specified HTML file
   fetch(modalFileName)
-    .then((response) => response.text())
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error(`Failed to load modal content: ${response.statusText}`);
+      }
+      return response.text();
+    })
     .then((data) => {
       // Create the modal container
       const modal = document.createElement('div');
       modal.id = `${deviceType}Modal`;
       modal.className = 'modal';
 
-      // Create a container for the modal content
+      // Create the modal content div and insert fetched HTML
       const modalContent = document.createElement('div');
       modalContent.className = 'modal-content';
+      modalContent.innerHTML = data.trim(); // Insert the HTML content fetched
 
-      // Insert the fetched HTML content into the modal-content container
-      modalContent.innerHTML = data;
-
-      // Append the modal content to the modal container
+      // Append the modal content to the modal
       modal.appendChild(modalContent);
 
       // Append the modal to the body
@@ -26,10 +29,11 @@ function createModal(deviceType, modalFileName) {
       modal.style.display = 'block';
 
       // Add close functionality for the modal
-      const closeModalButton = modal.querySelector('.close');
+      const closeModalButton = modalContent.querySelector('.close');
       if (closeModalButton) {
         closeModalButton.onclick = function () {
           modal.style.display = 'none';
+          document.body.removeChild(modal); // Remove modal from DOM on close
         };
       }
 
@@ -37,6 +41,7 @@ function createModal(deviceType, modalFileName) {
       window.onclick = function (event) {
         if (event.target === modal) {
           modal.style.display = 'none';
+          document.body.removeChild(modal); // Remove modal from DOM on close
         }
       };
     })
