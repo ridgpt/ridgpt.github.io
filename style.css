@@ -2,7 +2,7 @@
 :root {
     --primary-color: #007aff; /* Apple Blue */
     --secondary-color: #0051a3; /* Dark Apple Blue */
-    --background-gradient: linear-gradient(135deg, #f0f0f5, #e1e1e6); /* Light Gray gradient */
+    --background-gradient: linear-gradient(135deg, #007aff, #0051a3); /* Light Gray gradient */
     --card-background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     --text-color: #333333; /* Dark text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
