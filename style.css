@@ -215,13 +215,11 @@ button:active {
     height: 100%; /* Full height */
     background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
     transition: opacity 0.5s ease; /* Fade-out transition */
-    opacity: 0; /* Start with 0 opacity */
+    opacity: 1; /* Start with 0 opacity */
 }
 
-/* When the modal is shown, it should be fully visible */
-.modal.show {
-    display: block;
-    opacity: 1; /* Full opacity when the modal is visible */
+.modal.fade-out {
+    opacity: 0;
 }
 
 /* Modal Content */
@@ -248,8 +246,8 @@ top: 50%; /* Position from the top */
 
 /* Close Button */
 .close {
-    float: right;
-    bottom: 10px;
+    float: center;
+    bottom: 0px;
 }
 
 #result {
