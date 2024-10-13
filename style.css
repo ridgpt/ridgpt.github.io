@@ -206,9 +206,10 @@ button:active {
 /* Modal background */
 .modal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    position: relative; /* Stay in place */
     z-index: 1; /* Sit on top */
     left: 0;
+    overflow: auto;
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
