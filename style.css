@@ -150,7 +150,7 @@ textarea {
     -webkit-transition: border-color 0.3s, transform 0.3s; /* Safari */
     transition: border-color 0.3s, transform 0.3s;
     transform: translateY(0);
-    margin-bottom: 20px;
+    margin-bottom: 0px;
 }
 
 textarea::placeholder {
