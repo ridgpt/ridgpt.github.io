@@ -324,11 +324,6 @@ top: 50%; /* Position from the top */
     }
 }
 
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
 /* Vendor Prefixes for Flexbox Compatibility */
 .header {
     display: -webkit-box; /* Old Safari */
