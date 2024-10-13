@@ -9,18 +9,13 @@ function createModal(modalFileName, deviceType) {
             return response.text();
         })
         .then((data) => {
-            // Create the modal container
-            const modal = document.createElement('div');
-            modal.id = 'universalModal';
-            modal.className = 'modal'; // Assigning the "modal" class
+            // Create a container for the fetched content
+            const modalContainer = document.createElement('div');
+            modalContainer.innerHTML = data.trim(); // Insert the fetched HTML into the container
 
-            // Create the modal content container
-            const modalContent = document.createElement('div');
-            modalContent.className = 'modal-content'; // Assigning the "modal-content" class
-            modalContent.innerHTML = data.trim(); // Insert the HTML content fetched
-
-            // Append the modal content to the modal container
-            modal.appendChild(modalContent);
+            // Get the modal and modal content elements
+            const modal = modalContainer.querySelector('.modal');
+            const modalContent = modal.querySelector('.modal-content');
 
             // Append the modal to the body
             document.body.appendChild(modal);
@@ -74,7 +69,7 @@ const isAndroid = /Android/i.test(navigator.userAgent);
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 // Use a common HTML file for the modal and customize based on OS
-createModal('common-modal.html', isIOS ? 'ios' : (isAndroid ? 'android' : 'other'));
+createModal('modal.html', isIOS ? 'ios' : (isAndroid ? 'android' : 'other'));
 
 async function loadDataset() {
     const response = await fetch('dataset.json');
