@@ -11,7 +11,6 @@ function createModal(modalFileName, deviceType) {
         .then((data) => {
             // Create the modal container
             const modal = document.createElement('div');
-            modal.id = 'universalModal';
             modal.className = 'modal'; // Assigning the "modal" class
 
             // Create the modal content container
@@ -20,7 +19,7 @@ function createModal(modalFileName, deviceType) {
             modalContent.innerHTML = data.trim(); // Insert the HTML content fetched
 
             // Append the modal content to the modal container
-            modal.appendChild(modalContent);
+            modal.appendChild(modal-content);
 
             // Append the modal to the body
             document.body.appendChild(modal);
@@ -46,7 +45,7 @@ function createModal(modalFileName, deviceType) {
                     `;
                 }
             } else {
-                console.error('App instructions container not found in the modal content.');
+                console.error('App installation instructions not found.');
             }
 
             // Add close functionality for the modal
