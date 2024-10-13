@@ -139,6 +139,7 @@ textarea {
     background: linear-gradient(#ffffff, #ffffff) padding-box,
                linear-gradient(145deg, var(--primary-color), var(--secondary-color));
     border-radius: 10px;
+    margin-top: 20px;
     border: 2px solid transparent;
     resize: none;
     font-size: 1rem;
@@ -149,7 +150,7 @@ textarea {
     -webkit-transition: border-color 0.3s, transform 0.3s; /* Safari */
     transition: border-color 0.3s, transform 0.3s;
     transform: translateY(0);
-    margin-bottom: 0px;
+    margin-bottom: 20px;
 }
 
 textarea::placeholder {
