@@ -208,7 +208,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
     const loader = document.getElementById('loader');
 
     if (!content) {
-        alert("Please enter some content.");
+        alert("Please enter some content into the content input.");
         return;
     }
 
