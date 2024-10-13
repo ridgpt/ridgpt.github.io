@@ -11,6 +11,7 @@ function createModal(modalFileName, deviceType) {
         .then((data) => {
             // Create the modal container
             const modal = document.createElement('div');
+            modal.id = 'universalModal';
             modal.className = 'modal'; // Assigning the "modal" class
 
             // Create the modal content container
