@@ -1,5 +1,5 @@
 // Function to create and display the modal based on device type
-function createModal(deviceType, modalFileName) {
+function createModal(modalFileName, deviceType) {
     // Fetch the modal content from the specified HTML file
     fetch(modalFileName)
         .then((response) => {
@@ -11,7 +11,7 @@ function createModal(deviceType, modalFileName) {
         .then((data) => {
             // Create the modal container
             const modal = document.createElement('div');
-            modal.id = `${deviceType}Modal`;
+            modal.id = 'universalModal';
             modal.className = 'modal';
 
             // Create the modal content div and insert fetched HTML
@@ -27,6 +27,23 @@ function createModal(deviceType, modalFileName) {
 
             // Display the modal
             modal.style.display = 'block';
+
+            // Customize app instructions based on the device type
+            const appInstructions = document.getElementById('appInstructions');
+            if (deviceType === 'ios') {
+                appInstructions.innerHTML = `
+                    <h6 class="reshed" style="font-size: 0.7rem;">For the best experience, it is recommended that you get the RidGPT iOS app. <i class="fa-solid fa-circle-info"></i></h6>
+                    <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click the "share" button. <i class="fa-solid fa-arrow-up-right-from-square"></i></h6>
+                    <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click "add to home screen". <i class="fa-regular fa-square-plus"></i></h6>
+                    <h6 style="text-align: left; margin-bottom: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click "add". <i class="fa-regular fa-circle-check"></i></h6>
+                `;
+            } else if (deviceType === 'android') {
+                appInstructions.innerHTML = `
+                    <h6 class="reshed" style="font-size: 0.7rem;">For the best experience, it is recommended that you get the RidGPT Android app. <i class="fa-solid fa-circle-info"></i></h6>
+                    <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click the "Download" button below. <i class="fa-solid fa-arrow-down"></i></h6>
+                    <h6 style="text-align: left; margin-bottom: 0px;"><a href="/RidGPT.apk" class="button">Download Android App</a></h6>
+                `;
+            }
 
             // Add close functionality for the modal
             const closeModalButton = modalContent.querySelector('.close');
@@ -48,15 +65,13 @@ function createModal(deviceType, modalFileName) {
         .catch((error) => console.error('Error loading the modal content:', error));
 }
 
-// Check the device type and load the respective modal
+// Detect the device type and call the modal creation function
 const isAndroid = /Android/i.test(navigator.userAgent);
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
-if (isAndroid) {
-    createModal('android', 'android-modal.html');
-} else if (isIOS) {
-    createModal('ios', 'ios-modal.html');
-}
+// Use a common HTML file for the modal and customize based on OS
+createModal('common-modal.html', isIOS ? 'ios' : (isAndroid ? 'android' : 'other'));
+
 
 async function loadDataset() {
     const response = await fetch('dataset.json');
