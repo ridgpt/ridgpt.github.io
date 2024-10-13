@@ -35,7 +35,7 @@ function createModal(modalFileName, deviceType) {
                 if (deviceType === 'ios') {
                     appInstructions.innerHTML = `
                         <hr>
-                        <h6 class="reshed" style="margin-bottom: 0px;">Try The App <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
+                        <h6 class="reshed" style="margin-bottom: 0px;">How To Try The App <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
                         <h6 class="reshed" style="font-size: 0.7rem;">For the best experience, it is recommended that you try using the RidGPT iOS app. <i class="fa-solid fa-circle-info"></i></h6>
                         <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click the "share" button. <i class="fa-solid fa-arrow-up-right-from-square"></i></h6>
                         <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click "add to home screen". <i class="fa-regular fa-square-plus"></i></h6>
@@ -44,7 +44,7 @@ function createModal(modalFileName, deviceType) {
                 } else if (deviceType === 'android') {
                     appInstructions.innerHTML = `
                         <hr>
-                        <h6 class="reshed" style="margin-bottom: 0px;">Try The App <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
+                        <h6 class="reshed" style="margin-bottom: 0px;">How To Try The App <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
                         <h6 class="reshed" style="font-size: 0.7rem; margin-bottom: 20px;">For the best experience, it is recommended that you try using the RidGPT Android app. <i class="fa-solid fa-circle-info"></i></h6>
 <h6 style="text-align: left; opacity: 1;margin-top: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="opacity: 1;">Download the app file by clicking </span><a href="/RidGPT.apk">here</a><span style="opacity: 1;">. <i class="fa-solid fa-file-arrow-down"></i></span></h6>
 <h6 style="text-align: left; margin-bottom: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Install the app file. <i class="fa-solid fa-arrows-down-to-line"></i></h6>
