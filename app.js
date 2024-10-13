@@ -20,7 +20,7 @@ function createModal(modalFileName, deviceType) {
             modalContent.innerHTML = data.trim(); // Insert the HTML content fetched
 
             // Append the modal content to the modal container
-            modal.appendChild(modal-content);
+            modal.appendChild(modalContent);
 
             // Append the modal to the body
             document.body.appendChild(modal);
@@ -46,7 +46,7 @@ function createModal(modalFileName, deviceType) {
                     `;
                 }
             } else {
-                console.error('App installation instructions not found.');
+                console.error('App instructions container not found in the modal content.');
             }
 
             // Add close functionality for the modal
@@ -74,7 +74,7 @@ const isAndroid = /Android/i.test(navigator.userAgent);
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 // Use a common HTML file for the modal and customize based on OS
-createModal('modal.html', isIOS ? 'ios' : (isAndroid ? 'android' : 'other'));
+createModal('common-modal.html', isIOS ? 'ios' : (isAndroid ? 'android' : 'other'));
 
 async function loadDataset() {
     const response = await fetch('dataset.json');
