@@ -210,6 +210,8 @@ button:active {
     z-index: 1; /* Sit on top */
     left: 0;
     top: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgb(0,0,0); /* Fallback color */
@@ -219,8 +221,6 @@ button:active {
 /* Modal Content */
 .modal-content {
     background: var(--background-gradient);
-    margin-top: 20px;
-    margin-bottom: 20px;
     padding: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -235,7 +235,7 @@ button:active {
     max-height: calc(100vh - 40px); /* Maximum height to fit within the viewport with a 20px margin */
     overflow-y: auto; /* Enable scrolling if the content exceeds the max height */
     position: relative; /* Changed to relative for better centering */
-top: 0; /* Position from the top */
+top: 50%; /* Position from the top */
     left: 50%; /* Position from the left */
     transform: translate(-50%, -50%); /* Center the modal */
 }
