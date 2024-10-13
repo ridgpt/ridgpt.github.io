@@ -28,21 +28,25 @@ function createModal(modalFileName, deviceType) {
             // Display the modal
             modal.style.display = 'block';
 
-            // Customize app instructions based on the device type
-            const appInstructions = document.getElementById('appInstructions');
-            if (deviceType === 'ios') {
-                appInstructions.innerHTML = `
-                    <h6 class="reshed" style="font-size: 0.7rem;">For the best experience, it is recommended that you get the RidGPT iOS app. <i class="fa-solid fa-circle-info"></i></h6>
-                    <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click the "share" button. <i class="fa-solid fa-arrow-up-right-from-square"></i></h6>
-                    <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click "add to home screen". <i class="fa-regular fa-square-plus"></i></h6>
-                    <h6 style="text-align: left; margin-bottom: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click "add". <i class="fa-regular fa-circle-check"></i></h6>
-                `;
-            } else if (deviceType === 'android') {
-                appInstructions.innerHTML = `
-                    <h6 class="reshed" style="font-size: 0.7rem;">For the best experience, it is recommended that you get the RidGPT Android app. <i class="fa-solid fa-circle-info"></i></h6>
-                    <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click the "Download" button below. <i class="fa-solid fa-arrow-down"></i></h6>
-                    <h6 style="text-align: left; margin-bottom: 0px;"><a href="/RidGPT.apk" class="button">Download Android App</a></h6>
-                `;
+            // Populate app instructions based on the device type
+            const appInstructions = modalContent.querySelector('#appInstructions');
+            if (appInstructions) {
+                if (deviceType === 'ios') {
+                    appInstructions.innerHTML = `
+                        <h6 class="reshed" style="font-size: 0.7rem;">For the best experience, it is recommended that you get the RidGPT iOS app. <i class="fa-solid fa-circle-info"></i></h6>
+                        <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click the "share" button. <i class="fa-solid fa-arrow-up-right-from-square"></i></h6>
+                        <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click "add to home screen". <i class="fa-regular fa-square-plus"></i></h6>
+                        <h6 style="text-align: left; margin-bottom: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click "add". <i class="fa-regular fa-circle-check"></i></h6>
+                    `;
+                } else if (deviceType === 'android') {
+                    appInstructions.innerHTML = `
+                        <h6 class="reshed" style="font-size: 0.7rem;">For the best experience, it is recommended that you get the RidGPT Android app. <i class="fa-solid fa-circle-info"></i></h6>
+                        <h6 style="text-align: left;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Click the "Download" button below. <i class="fa-solid fa-arrow-down"></i></h6>
+                        <h6 style="text-align: left; margin-bottom: 0px;"><a href="/RidGPT.apk" class="button">Download Android App</a></h6>
+                    `;
+                }
+            } else {
+                console.error('App instructions container not found in the modal content.');
             }
 
             // Add close functionality for the modal
@@ -70,7 +74,7 @@ const isAndroid = /Android/i.test(navigator.userAgent);
 const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 // Use a common HTML file for the modal and customize based on OS
-createModal('common-modal.html', isIOS ? 'ios' : (isAndroid ? 'android' : 'other'));
+createModal('modal.html', isIOS ? 'ios' : (isAndroid ? 'android' : 'other'));
 
 
 async function loadDataset() {
