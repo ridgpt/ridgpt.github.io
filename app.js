@@ -26,8 +26,10 @@ function createModal(modalFileName, deviceType) {
             // Append the modal to the body
             document.body.appendChild(modal);
 
-            // Display the modal
-            modal.style.display = 'block';
+            // Display the modal by adding the "show" class
+            setTimeout(() => {
+                modal.classList.add('show');
+            }, 10); // Small delay to trigger CSS transition
 
             // Populate app instructions based on the device type
             const appInstructions = modalContent.querySelector('#appInstructions');
@@ -45,9 +47,9 @@ function createModal(modalFileName, deviceType) {
                     appInstructions.innerHTML = `
                         <hr>
                         <h6 class="reshed" style="margin-bottom: 0px;">How To Try The App <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
-                        <h6 class="reshed" style="font-size: 0.7rem; margin-bottom: 20px;">For the best experience, it is recommended that you try using the RidGPT Android app. <i class="fa-solid fa-circle-info"></i></h6>
-<h6 style="text-align: left; opacity: 1;margin-top: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="opacity: 0.8;">Download the app file by clicking </span><a href="/RidGPT.apk">here</a><span style="opacity: 0.8;">. <i class="fa-solid fa-file-arrow-down"></i></span></h6>
-<h6 style="text-align: left; margin-bottom: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Install the app file. <i class="fa-solid fa-arrows-down-to-line"></i></h6>
+                        <h6 class="reshed" style="font-size: 0.7rem;">For the best experience, it is recommended that you try using the RidGPT Android app. <i class="fa-solid fa-circle-info"></i></h6>
+                        <h6 style="text-align: left; opacity: 1;margin-top: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> <span style="opacity: 0.8;">Download the app file by clicking </span><a href="/RidGPT.apk">here</a><span style="opacity: 0.8;">. <i class="fa-solid fa-file-arrow-down"></i></span></h6>
+                        <h6 style="text-align: left; margin-bottom: 0px;"><i class="fa-solid fa-chevron-right gradient-icon"></i> Install the app file. <i class="fa-solid fa-arrows-down-to-line"></i></h6>
                     `;
                 }
             } else {
@@ -58,18 +60,24 @@ function createModal(modalFileName, deviceType) {
             const closeModalButton = modalContent.querySelector('.close');
             if (closeModalButton) {
                 closeModalButton.onclick = function () {
-                    modal.style.display = 'none';
-                    document.body.removeChild(modal); // Remove modal from DOM on close
-                    localStorage.setItem('modalClosed', 'true'); // Set the flag to not show the modal again
+                    modal.classList.remove('show'); // Start the fade-out effect
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                        document.body.removeChild(modal); // Remove modal from DOM after transition
+                        localStorage.setItem('modalClosed', 'true'); // Set the flag to not show the modal again
+                    }, 500); // Wait for the CSS transition to complete
                 };
             }
 
             // Close the modal when clicking outside the modal content
             window.onclick = function (event) {
                 if (event.target === modal) {
-                    modal.style.display = 'none';
-                    document.body.removeChild(modal); // Remove modal from DOM on close
-                    localStorage.setItem('modalClosed', 'true'); // Set the flag to not show the modal again
+                    modal.classList.remove('show'); // Start the fade-out effect
+                    setTimeout(() => {
+                        modal.style.display = 'none';
+                        document.body.removeChild(modal); // Remove modal from DOM after transition
+                        localStorage.setItem('modalClosed', 'true'); // Set the flag to not show the modal again
+                    }, 500); // Wait for the CSS transition to complete
                 }
             };
         })
@@ -82,7 +90,6 @@ const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
 
 // Use a common HTML file for the modal and customize based on OS
 createModal('modal.html', isIOS ? 'ios' : (isAndroid ? 'android' : 'other'));
-
 
 async function loadDataset() {
     const response = await fetch('dataset.json');
