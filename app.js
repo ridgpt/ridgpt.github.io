@@ -4,7 +4,7 @@ function createModal(modalFileName, deviceType) {
     fetch(modalFileName)
         .then((response) => {
             if (!response.ok) {
-                throw new Error(`Failed to load modal content: ${response.statusText}`);
+                throw new Error(`Failed to load splash screen: ${response.statusText}`);
             }
             return response.text();
         })
@@ -45,7 +45,7 @@ function createModal(modalFileName, deviceType) {
                     `;
                 }
             } else {
-                console.error('App instructions container not found in the modal content.');
+                console.error('App installation instructions unavailable.');
             }
 
             // Add close functionality for the modal
