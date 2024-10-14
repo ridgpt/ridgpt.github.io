@@ -73,11 +73,11 @@ async function fetchCommitCount() {
     try {
         const response = await fetch(apiUrl);
         if (!response.ok) {
-            throw new Error('Network response was not ok');
+            throw new Error('Bad network response');
         }
 
         const data = await response.json();
-        const commitCount = data.length;
+        const commitCount = data.length; // Get the total number of commits
         updateVersion(commitCount);
     } catch (error) {
         console.error('Error fetching version:', error);
@@ -85,13 +85,18 @@ async function fetchCommitCount() {
 }
 
 function updateVersion(commitCount) {
-    const major = 1;  // Adjust based on your versioning strategy
-    const minor = 0;  // Adjust based on your versioning strategy
-    const patch = 0;  // Adjust based on your versioning strategy
+    const major = 1;  // Major version
+    const minor = 0;  // Minor version
+    const patch = commitCount; // Use commit count for the patch version
 
-    const version = `${major}.${minor}.${commitCount}`;
+    // Create the semantic version string
+    const version = `${major}.${minor}.${patch}`;
+    
+    // Update the version display on the webpage
     document.getElementById('version-number').innerHTML = `v${version}-experimental <i class="fa-solid fa-flask"></i>`;
 }
+
+// Call the function to fetch commit count and update version
 fetchCommitCount();
     </script>
     
