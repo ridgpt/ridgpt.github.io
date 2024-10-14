@@ -117,6 +117,7 @@ h1 {
 }
 
 .exptxt {
+    opacity: 1;
     background: var(--exptxt-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
