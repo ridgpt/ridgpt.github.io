@@ -10,19 +10,20 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Install dependencies
-        run: npm install # Keep this if you have dependencies
+    - name: Install dependencies
+      run: npm install # Keep this if you have dependencies
 
-      - name: Update version number
-        run: |
-          # Your commands to update version number based on commits
+    - name: Update version number
+      run: |
+        # Your commands to update version number based on commits
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.PAT_GITHUB }}  # Use the PAT here
-          publish_dir: ./
-          external_repository: ridgpt/ridgpt.github.io
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./
+        publish_branch: gh-pages # Publish to the gh-pages branch of the same repository
+        allow_empty_commit: true # Optional, allows empty commits
