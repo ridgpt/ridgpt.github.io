@@ -92,12 +92,12 @@ hr {
 }
 
 .expbadge {
-   background: var(--exp-gradient);
-   color: var(--text-color);
-   padding: 10px;
-   font-size: 1rem;
-   border: 0px solid transparent;
-   border-radius: 100px;
+    background: var(--exp-gradient);
+    color: var(--text-color);
+    padding: 10px;
+    font-size: 1rem;
+    border: 0px solid transparent;
+    border-radius: 100px;
 }
 
 h1 {
