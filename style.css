@@ -1,17 +1,17 @@
 /* CSS Variables for easy theme management */
 :root {
-    --primary-color: #1a3d2f; /* Dark Green */
-    --secondary-color: #0e1f15; /* Deeper Dark Green */
-    --background-gradient: linear-gradient(135deg, #121212, #1c1c1c); /* Dark Gray gradient */
-    --card-background: rgba(30, 40, 35, 0.8); /* Semi-transparent dark green */
+    --primary-color: #004d00; /* Dark Green */
+    --secondary-color: #007a00; /* Medium Dark Green */
+    --background-gradient: linear-gradient(135deg, #0a0a0a, #1a1a1a); /* Dark gray gradient */
+    --card-background: rgba(25, 25, 25, 0.9); /* Semi-transparent dark gray */
     --text-color: #e0e0e0; /* Light text for readability */
-    --placeholder-color: #6a6a6a; /* Dark gray for placeholder */
-    --shadow: rgba(0, 0, 0, 0.6); /* Dark shadow */
+    --placeholder-color: #a0a0a0; /* Light gray for placeholder */
+    --shadow: rgba(0, 0, 0, 0.5);
 }
 
 /* Fallbacks for CSS Variables */
 body {
-    background: #121212; /* Fallback for background */
+    background: #0a0a0a; /* Fallback for background */
     color: #e0e0e0; /* Fallback for text color */
 }
 
@@ -56,8 +56,10 @@ hr {
     height: 50px;
     border-radius: 50%;
     background: linear-gradient(var(--primary-color), var(--secondary-color));
-    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 7px), #fff 0);
-    mask: radial-gradient(farthest-side, #0000 calc(100% - 7px), #fff 0);
+    /* Show only 10px from the border */
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#fff 0);
+    mask: radial-gradient(farthest-side,#0000 calc(100% - 7px),#fff 0);
+
     animation: fadeIn 1s ease-in-out, spin 1s linear infinite; /* Spinning animation & fade-in */
     margin: 20px auto; /* Center the loader */
     display: none; /* Initially hidden */
@@ -68,10 +70,8 @@ hr {
     background: var(--card-background); /* Glass effect */
     padding: 40px;
     border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
     backdrop-filter: blur(10px); /* Glass effect */
-    background: linear-gradient(#1c1c1c, #1c1c1c) padding-box,
-                linear-gradient(145deg, var(--primary-color), var(--secondary-color));
     border: 2px solid transparent;
     width: 90%;
     margin: auto;
@@ -103,6 +103,44 @@ h6 {
     opacity: 0.8;
 }
 
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: slideDown 0.5s ease-out;
+}
+
+.logo {
+    width: 50px;
+    margin-top: 20px;
+    height: 50px;
+    float: left;
+}
+
+.logo:hover {
+    animation: tilt-shaking-rev 0.8s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+.pageslogo {
+    width: 50px;
+    margin-top: 20px;
+    height: 50px;
+    float: left;
+}
+
+.pageslogo:hover {
+    animation: tilt-shaking 0.8s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    perspective: 1000px;
+}
+
+.headtxt {
+    padding-left: 20px;
+    float: left;
+}
+
 a {
     background: linear-gradient(145deg, var(--primary-color), var(--secondary-color));
     -webkit-background-clip: text;
@@ -112,10 +150,10 @@ a {
 }
 
 textarea {
+    font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     width: 100%;
     padding: 15px;
-    background: linear-gradient(#1c1c1c, #1c1c1c) padding-box,
-                linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+    background: var(--card-background); /* Dark background for textarea */
     border-radius: 10px;
     margin-top: 20px;
     border: 2px solid transparent;
@@ -124,18 +162,30 @@ textarea {
     color: var(--text-color);
     opacity: 0.9;
     transition: border-color 0.3s, transform 0.3s;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+    -webkit-transition: border-color 0.3s, transform 0.3s; /* Safari */
+    transform: translateY(0);
+    margin-bottom: 0px;
 }
 
 textarea::placeholder {
-    color: var(--placeholder-color); /* Dark gray for placeholder */
+    color: var(--placeholder-color); /* Light gray for placeholder */
 }
 
 textarea:focus {
-    background: linear-gradient(#1c1c1c, #1c1c1c) padding-box,
-                linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
+    background: var(--card-background);
+    border: 2px solid transparent;
     outline: none;
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+textarea:hover {
+    background: var(--card-background);
+    border: 2px solid transparent;
+    outline: none;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 button {
@@ -148,11 +198,54 @@ button {
     color: #ffffff; /* White text for button */
     font-size: 1.2rem;
     cursor: pointer;
+    position: relative;
+    overflow: hidden;
     transition: background-image 0.3s, transform 0.2s;
+    -webkit-transition: background-image 0.3s, transform 0.2s; /* Safari */
 }
 
 button:hover {
     background-image: linear-gradient(-145deg, var(--primary-color), var(--secondary-color)); /* Gradient for hover */
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Modal background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.8); /* Dark background with opacity */
+    transition: opacity 0.5s ease; /* Fade-out transition */
+    opacity: 1; /* Start with 0 opacity */
+}
+
+.modal.fade-out {
+    opacity: 0;
+}
+
+/* Modal Content */
+.modal-content {
+    background: var(--card-background);
+    padding: 20px;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
+    backdrop-filter: blur(10px); /* Glass effect */
+    margin: 15% auto; /* 15% from the top and centered */
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Character Count Styles */
+.character-count {
+    font-size: 0.9rem; /* Smaller font size for character count */
+    color: var(--placeholder-color); /* Use placeholder color for less prominence */
+    margin-top: 5px;
 }
