@@ -4,7 +4,7 @@
     --secondary-color: #c0c0c0; /* Silver */
     --background-gradient: linear-gradient(135deg, #000000, #000000); /* Black-black gradient */
     --card-background: linear-gradient(-135deg, #ffffff, #06402B); /* Semi-transparent black */
-    --text-color: #ffffff; /* White text for readability */
+    --text-color: #06402B; /* White text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
     --shadow: rgba(255, 255, 255, 0.1);
 }
