@@ -1,0 +1,31 @@
+name: Create package.json
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  create-package-json:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+
+      - name: Create package.json
+        run: |
+          echo "{}" > package.json
+          npm init -y
+
+      - name: Commit package.json
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json
+          git commit -m "Create package.json"
+          git push
