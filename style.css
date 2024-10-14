@@ -120,7 +120,7 @@ h6 {
 }
 
 .logo:hover {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   perspective: 1000px;
 }
@@ -134,7 +134,7 @@ h6 {
 }
 
 .pageslogo:hover {
-    animation: tilt-shaking 0.25s infinite;
+    animation: tilt-shaking 1s both;
 }
 
 .headtxt {
