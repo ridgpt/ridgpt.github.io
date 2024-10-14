@@ -104,7 +104,9 @@ hr {
     right: 0px;
 }
 
-
+.verbadge:hover {
+    animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+}
 
 h1 {
     font-size: 2.5rem;
