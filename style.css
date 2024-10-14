@@ -83,7 +83,6 @@ hr {
 }
 
 .gradient {
-  position: relative;
   z-index:1;
   filter: brightness(120%);
 }
