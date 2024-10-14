@@ -82,24 +82,6 @@ hr {
     padding-top: 0px;
 }
 
-.gradient {
-    position: relative;
-    z-index:1;
-    filter: brightness(120%);
-}
-
-.gradient:before {
-  z-index: -1;
-  position: absolute;
-  content:"";
-  width:100%;
-  height:100%;
-  left: 0px;
-  right: 0px;
-  background-image: linear-gradient(45deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
-  filter: blur(30px);
-}
-
 .gradient-icon {
     font-size: 1.4rem; /* Adjust icon size */
     background: linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
