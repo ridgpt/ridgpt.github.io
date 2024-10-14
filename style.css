@@ -315,14 +315,12 @@ top: 50%; /* Position from the top */
 .info-section {
     margin-top: 20px;
     margin-bottom: 10px;
-    position: fixed;
     font-size: 0.7rem;
 }
 
 .copyright {
     margin-top: 0px;
     font-size: 0.7rem;
-    position: fixed;
     margin-bottom: 0px;
 }
 
