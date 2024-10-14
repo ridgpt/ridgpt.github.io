@@ -117,9 +117,30 @@ h6 {
     margin-top: 20px;
     height: 50px;
     float: left;
+  transition: .5s;
+  transform: scale(.9);
+  z-index: -1;
 }
 
-.logo:hover {
+logo:hover::before {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px #ffee10;
+}
+
+logo:hover {
+  color: #ffee10;
+  box-shadow: 0 0 5px #ffee10;
+  text-shadow: 0 0 5px #ffee10;
+}
+
+.pageslogo {
+    width: 50px;
+    margin-top: 20px;
+    height: 50px;
+    float: left;
+}
+
+.pageslogo:hover {
     animation: tilt-shaking 0.25s infinite;
 }
 
