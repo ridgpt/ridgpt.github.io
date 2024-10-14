@@ -3,7 +3,7 @@
     --primary-color: #06402B; /* Dark green */
     --secondary-color: #c0c0c0; /* Silver */
     --background-gradient: linear-gradient(135deg, #000000, #06402B); /* Black-green gradient */
-    --card-background: rgba(0, 0, 0, 0.1); /* Semi-transparent black */
+    --card-background: #000000; /* Semi-transparent black */
     --text-color: #ffffff; /* White text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
     --shadow: rgba(255, 255, 255, 0.1);
