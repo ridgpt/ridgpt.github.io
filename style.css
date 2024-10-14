@@ -107,7 +107,7 @@ hr {
 }
 
 #version-number:hover {
-    animation: shake 1s cubic-bezier(.36,.07,.19,.97) both;
+    animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
