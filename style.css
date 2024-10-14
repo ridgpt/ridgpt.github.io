@@ -6,6 +6,7 @@
     --card-background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     --text-color: #333333; /* Dark text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
+    --placeholder-background: #f0f0f0; /* Light gray for placeholder */
     --shadow: rgba(255, 255, 255, 0.1);
 }
 
@@ -151,6 +152,7 @@ a {
 
 textarea {
     font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--placeholder-background);
     width: 100%;
     padding: 15px;
     background: linear-gradient(#ffffff, #ffffff) padding-box,
