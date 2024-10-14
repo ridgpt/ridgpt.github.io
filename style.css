@@ -210,6 +210,7 @@ button {
     transition: background-image 0.3s, transform 0.2s;
     -webkit-transition: background-image 0.3s, transform 0.2s; /* Safari */
     transition: background-image 0.3s, transform 0.2s;
+    transform: translateY(0);
 }
 
 button:hover {
