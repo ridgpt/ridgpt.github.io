@@ -69,27 +69,32 @@ async function fetchCommitCount() {
     const username = 'ridgpt';
     const repository = 'ridgpt.github.io';
     const apiUrl = `https://api.github.com/repos/${username}/${repository}/commits`;
-    let totalCommits = 0;
+    let commitCount = 0;
     let page = 1;
-    const perPage = 100; // Fetch 100 commits per request
+    const perPage = 100; // Maximum number of results per page
 
     try {
         while (true) {
-            const response = await fetch(`${apiUrl}?per_page=${perPage}&page=${page}`);
+            const response = await fetch(`${apiUrl}?per_page=${perPage}&page=${page}`, {
+                headers: {
+                    'Accept': 'application/vnd.github.v3+json',
+                }
+            });
+
             if (!response.ok) {
-                throw new Error('Bad network response');
+                throw new Error(`HTTP error encountered. Status: ${response.status}`);
             }
 
             const data = await response.json();
+            if (data.length === 0) break; // Break if no more commits
 
-            if (data.length === 0) break; // Exit loop if no more commits
-            totalCommits += data.length; // Add to total commits
+            commitCount += data.length; // Increment total commit count
             page++; // Move to the next page
         }
 
-        updateVersion(totalCommits);
+        updateVersion(commitCount);
     } catch (error) {
-        console.error('Error fetching version:', error);
+        console.error('Error fetching version:', error.message, error);
     }
 }
 
