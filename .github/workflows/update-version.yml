@@ -1,4 +1,4 @@
-name: Update Website Version
+name: Update Version
 
 on:
   push:
@@ -10,29 +10,18 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Check out the repository
-        uses: actions/checkout@v2
+    - name: Checkout code
+      uses: actions/checkout@v2
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v2
-        with:
-          node-version: '16'
+    - name: Install dependencies
+      run: npm install # Keep this if you have dependencies
 
-      - name: Install dependencies
-        run: npm install
+    - name: Update version number
+      run: |
+        # Your commands to update version number based on commits
 
-      - name: Fetch commit count
-        run: |
-          COMMIT_COUNT=$(git rev-list --count HEAD)
-          echo "Commit Count: $COMMIT_COUNT"
-          echo "COMMIT_COUNT=$COMMIT_COUNT" >> $GITHUB_ENV
-
-    # Remove or comment out the following build step if not needed
-          # - name: Build project
-    #   run: npm run build
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./your-publish-directory # Adjust based on where your static files are
