@@ -80,12 +80,15 @@ hr {
     max-width: 480px;
     padding-bottom: 20px;
     padding-top: 0px;
+}
+
+.gradient {
     position: relative;
     z-index:1;
     filter: brightness(120%);
 }
 
-.container:before {
+.gradient:before {
   z-index: -1;
   position: absolute;
   content:"";
