@@ -311,12 +311,18 @@ top: 50%; /* Position from the top */
 }
 
 .info-section {
+   position: fixed;
+   left: 0;
+   bottom: 0;
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 0.7rem;
 }
 
 .copyright {
+   position: fixed;
+   left: 0;
+   bottom: 0;
     margin-top: 0px;
     font-size: 0.7rem;
     margin-bottom: 0px;
