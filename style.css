@@ -293,21 +293,12 @@ top: 50%; /* Position from the top */
 }
 
 .info-section {
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   text-align: center;
     margin-top: 20px;
     margin-bottom: 10px;
     font-size: 0.7rem;
 }
 
 .copyright {
-
-   left: 0;
-   bottom: 0;
-   width: 100%;
-   text-align: center;
     margin-top: 0px;
     font-size: 0.7rem;
     margin-bottom: 0px;
