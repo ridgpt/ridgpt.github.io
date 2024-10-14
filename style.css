@@ -83,16 +83,25 @@ hr {
     padding-top: 0px;
 }
 
-.container:before {
+.gradient {
+    max-width: 250px;
+  padding: 2px;
+  position: relative;
+  z-index:1;
+  margin-right:25px;
+  filter: brightness(120%);
+}
+
+.gradient:before {
   z-index:-1;
   position: absolute;
   content:"";
-  width:95%;
+  width:100%;
   height:100%;
   left:10px;
   top:0;
   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
-  filter: blur(20px);
+  filter: blur(25px);
 }
 
 .gradient-icon {
