@@ -7,16 +7,6 @@
     --text-color: #333333; /* Dark text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
     --shadow: rgba(255, 255, 255, 0.1);
-    --transparent: oklch(0 0 0 / 0%);
-    --purple-100: oklch(0.86 0.08 280);
-    --purple-200: oklch(0.82 0.06 280);
-    --purple-300: oklch(0.71 0.12 280);
-    --purple-400: oklch(0.61 0.18 280);
-    --purple-500: oklch(0.5 0.21 280);
-    --purple-600: oklch(0.42 0.18 280);
-    --purple-800: oklch(0.25 0.15 280);
-    --purple-900: oklch(0.13 0.06 280);
-    --purple-900: oklch(0.13 0.06 280);
 }
 
 /* Fallbacks for CSS Variables */
@@ -207,43 +197,31 @@ textarea:hover {
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-
-.button {
-  position: relative;
-  z-index: 1;
-  background: var(--purple-900);
-  border: 3px solid;
-  border-color: var(--purple-400);
-  border-radius: 0.75rem;
-  color: var(--purple-300);
-  padding: 0.75rem 1rem;
-  text-decoration: none;
-  transition: 250ms ease-in-out;
-  transition-property: all;
+button {
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background-image: linear-gradient(145deg, var(--primary-color), var(--secondary-color)); /* Gradient for button */
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    color: #ffffff; /* White text for button */
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: background-image 0.3s, transform 0.2s;
+    -webkit-transition: background-image 0.3s, transform 0.2s; /* Safari */
+    transition: background-image 0.3s, transform 0.2s;
 }
 
-button:hover,
-button:focus {
-  color: var(--purple-200);
-  background-color: var(--purple-800);
-  transform: scale(1.1);
+button:hover {
+    background-image: linear-gradient(-145deg, var(--primary-color), var(--secondary-color)); /* Gradient for hover */
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-button:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  opacity: 0.6;
-  border-radius: inherit;
-  box-shadow: 0 0 1em 0.5em var(--purple-300);
-  transition: 250ms ease-in-out;
-  transition-property: opacity;
-}
-
-button:hover::after,
-button:focus::after {
-  opacity: 0.6;
+button:active {
+    transform: translateY(0);
 }
 
 /* Modal background */
