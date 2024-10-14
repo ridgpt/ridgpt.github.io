@@ -3,7 +3,6 @@
     --primary-color: #007aff; /* Apple Blue */
     --secondary-color: #0051a3; /* Dark Apple Blue */
     --background-gradient: linear-gradient(135deg, #f0f0f5, #e1e1e6); /* Light Gray gradient */
-    --ai-gradient: linear-gradient(90deg, #0f0c29, #302b63, #24243e, #f72585, #7209b7, #4361ee, #4cc9f0); /* Light Gray gradient */
     --card-background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     --text-color: #333333; /* Dark text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
@@ -71,7 +70,7 @@ hr {
     background: var(--card-background);
     padding: 40px;
     border-radius: 15px; /* Rounded corners */
-    box-shadow: var(--ai-gradient) 0 0 90px 33px;
+    box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
     border: 2px solid transparent;
     width: 90%;
     margin: auto;
