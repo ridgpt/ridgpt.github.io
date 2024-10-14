@@ -78,6 +78,7 @@ async function fetchCommitCount() {
 
         const data = await response.json();
         const commitCount = data.length; // Get the total number of commits
+        console.log('Commit Count:', commitCount); // Log commit count for debugging
         updateVersion(commitCount);
     } catch (error) {
         console.error('Error fetching version:', error);
