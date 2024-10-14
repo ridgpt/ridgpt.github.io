@@ -79,6 +79,7 @@ hr {
     margin: auto;
     max-width: 480px;
     padding-bottom: 20px;
+    opacity: 1;
     padding-top: 0px;
     z-index: 1;
     position: relative; /* Ensure the container has a position relative to the absolute pseudo-element */
