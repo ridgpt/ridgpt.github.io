@@ -90,7 +90,7 @@ function updateVersion(commitCount) {
     const patch = 0;  // Adjust based on your versioning strategy
 
     const version = `${major}.${minor}.${commitCount}`;
-    document.getElementById('version-number').textContent = `v${version}-experimental <i class="fa-solid fa-flask"></i>`;
+    document.getElementById('version-number').innerHTML = `v${version}-experimental <i class="fa-solid fa-flask"></i>`;
 }
 fetchCommitCount();
     </script>
