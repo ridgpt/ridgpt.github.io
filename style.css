@@ -103,14 +103,10 @@ hr {
     border-radius: 100px;
     right: 0px;
     display: inline-block; /* Ensure it takes up only necessary space */
-    will-change: transform; /* Helps with performance during animations */
 }
 
 #version-number:hover {
     animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
 }
 
 h1 {
