@@ -107,6 +107,10 @@ hr {
     right: 0px;
 }
 
+.expbadge:hover {
+    animation: pop 0.8s linear 1;
+}
+
 h1 {
     font-size: 2.5rem;
     margin-top: 20px;
@@ -382,6 +386,10 @@ top: 50%; /* Position from the top */
   50% { transform: rotate(0eg); }
   75% { transform: rotate(5deg); }
   100% { transform: rotate(0deg); }
+}
+
+@keyframes pop{
+  50%  {transform: scale(1.2);}
 }
 
 /* Spin */
