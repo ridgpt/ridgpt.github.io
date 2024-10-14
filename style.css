@@ -1,6 +1,6 @@
 /* CSS Variables for easy theme management */
 :root {
-    --primary-color: #064O2B; /* Dark green */
+    --primary-color: #06402B; /* Dark green */
     --secondary-color: #c0c0c0; /* Silver */
     --background-gradient: linear-gradient(135deg, #000000, #064O2B); /* Black-green gradient */
     --card-background: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
