@@ -81,20 +81,18 @@ hr {
     padding-bottom: 20px;
     opacity: 1;
     padding-top: 0px;
-    z-index: 1;
-    position: relative; /* Ensure the container has a position relative to the absolute pseudo-element */
 }
 
-.container:after {
-    z-index: -1;
-    position: absolute; 
-    content: "";
-    width: 95%;
-    height: 100%;
-    left: 10px;
-    top: 0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
-    filter: blur(20px);
+.container:before {
+  z-index:-1;
+  position: absolute;
+  content:"";
+  width:95%;
+  height:100%;
+  left:10px;
+  top:0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
+  filter: blur(20px);
 }
 
 .gradient-icon {
