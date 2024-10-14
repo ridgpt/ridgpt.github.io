@@ -70,9 +70,7 @@ hr {
     background: var(--card-background);
     padding: 40px;
     border-radius: 15px; /* Rounded corners */
-    box-shadow:
-    0 0 60px 30px var(--secondary-color);
-    backdrop-filter: blur(10px); /* Glass effect */
+    box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
     border: 2px solid transparent;
     width: 90%;
     margin: auto;
