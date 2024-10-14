@@ -2,9 +2,9 @@
 :root {
     --primary-color: #06402B; /* Dark green */
     --secondary-color: #c0c0c0; /* Silver */
-    --background-gradient: linear-gradient(135deg, #ffffff, #ffffff); /* Black-black gradient */
+    --background-gradient: linear-gradient(135deg, #000000, #000000); /* Black-black gradient */
     --card-background: linear-gradient(-135deg, #000000, #06402B); /* Semi-transparent black */
-    --text-color: #06402B; /* White text for readability */
+    --text-color: #c0c0c0; /* White text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
     --shadow: rgba(255, 255, 255, 0.1);
 }
@@ -71,7 +71,7 @@ hr {
     padding: 40px;
     border-radius: 15px; /* Rounded corners */
     box-shadow:
-    0 0 60px 30px var(--primary-color);
+    0 0 60px 30px var(--secondary-color);
     backdrop-filter: blur(10px); /* Glass effect */
     border: 2px solid transparent;
     width: 90%;
