@@ -1,10 +1,10 @@
 /* CSS Variables for easy theme management */
 :root {
-    --primary-color: #fc0fc0; /* Shocking Pink */
-    --secondary-color: #B3457A; /* Dark Shocking Pink */
-    --background-gradient: linear-gradient(135deg, #000000, #c0c0c0); /* Black-white gradient */
-    --card-background: rgba(30, 35, 42, 0.9); /* Semi-transparent black */
-    --text-color: #333333; /* Dark text for readability */
+    --primary-color: #064O2B; /* Dark green */
+    --secondary-color: #c0c0c0; /* Silver */
+    --background-gradient: linear-gradient(135deg, #000000, #064O2B); /* Black-green gradient */
+    --card-background: rgba(0, 0, 0, 0.9); /* Semi-transparent black */
+    --text-color: #ffffff; /* White text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
     --shadow: rgba(255, 255, 255, 0.1);
 }
