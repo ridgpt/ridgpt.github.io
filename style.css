@@ -67,7 +67,7 @@ hr {
 }
 
 .container {
-    background: var(--card-background); /* Glass effect */
+    background: #000000;
     padding: 40px;
     border-radius: 15px; /* Rounded corners */
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
