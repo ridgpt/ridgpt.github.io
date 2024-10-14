@@ -27,8 +27,9 @@ jobs:
           echo "Commit Count: $COMMIT_COUNT"
           echo "COMMIT_COUNT=$COMMIT_COUNT" >> $GITHUB_ENV
 
-      - name: Build the website with new version number
-        run: npm run build
+    # Remove or comment out the following build step if not needed
+          # - name: Build project
+    #   run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
