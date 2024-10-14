@@ -1,10 +1,10 @@
 /* CSS Variables for easy theme management */
 :root {
-    --primary-color: #06402B; /* Dark green */
-    --secondary-color: #c0c0c0; /* Silver */
-    --background-gradient: linear-gradient(135deg, #000000, #000000); /* Black-black gradient */
-    --card-background: linear-gradient(-135deg, #000000, #06402B); /* Semi-transparent black */
-    --text-color: #c0c0c0; /* White text for readability */
+    --primary-color: #007aff; /* Apple Blue */
+    --secondary-color: #0051a3; /* Dark Apple Blue */
+    --background-gradient: linear-gradient(135deg, #f0f0f5, #e1e1e6); /* Light Gray gradient */
+    --card-background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+    --text-color: #333333; /* Dark text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
     --shadow: rgba(255, 255, 255, 0.1);
 }
@@ -70,7 +70,7 @@ hr {
     background: var(--card-background);
     padding: 40px;
     border-radius: 15px; /* Rounded corners */
-    box-shadow: rgba(72, 135, 202, 0.8) 0 0 90px 33px;
+    box-shadow: var(--primary-color) 0 0 90px 33px;
     border: 2px solid transparent;
     width: 90%;
     margin: auto;
