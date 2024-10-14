@@ -20,8 +20,10 @@ jobs:
       run: |
         # Your commands to update version number based on commits
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: $}{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./ # Adjust based on where your static files are
+- name: Deploy to GitHub Pages
+  uses: peaceiris/actions-gh-pages@v3
+  with:
+    github_token: ${{ secrets.GITHUB_TOKEN }}
+    publish_dir: ./
+    publish_branch: gh-pages
+    external_repository: ridgpt/ridgpt.github.io
