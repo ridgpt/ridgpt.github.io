@@ -6,7 +6,6 @@
     --card-background: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
     --text-color: #333333; /* Dark text for readability */
     --placeholder-color: #a0a0a0; /* Light gray for placeholder */
-    --exp-gradient: linear-gradient(135deg, #ffcc00, #ff6600, #ff0000); /* Experimental-themed text gradient */
     --shadow: rgba(255, 255, 255, 0.1);
 }
 
@@ -121,7 +120,7 @@ h1 {
 
 .exptxt {
     opacity: 1;
-    background: var(--exptxt-gradient);
+    background: linear-gradient(135deg, #ffcc00, #ff6600, #ff0000); /* Experimental-themed text gradient */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;    
 }
