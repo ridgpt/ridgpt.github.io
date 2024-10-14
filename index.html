@@ -39,13 +39,45 @@
             <div id="result" class="hide"></div>
         </div>
      </div>
-      <span class="verbadge">v1.1.0-experimental <i class="fa-solid fa-flask"></i></span></span>
+      <span class="verbadge" id="version-number">Getting Version...</span></span>
     <h6 class="info-section" style="opacity: 1;">
         <span style="opacity: 0.8;">Report a problem by clicking </span><a href="https://forms.gle/itJUJ7TwdyoTEhep9">here</a><span style="opacity: 0.8;">.</span>
     </h6>
     <h6 class="copyright">
         Copyright © <script>document.write(new Date().getFullYear());</script>, <b><span class="lm-text-theme">RidGPT</span></b>. All rights reserved.
     </h6>
+    
+<script>
+async function fetchCommitCount() {
+    const username = 'ridgpt';
+    const repository = 'ridgpt.github.io';
+    const apiUrl = `https://api.github.com/repos/${username}/${repository}/commits`;
+
+    try {
+        const response = await fetch(apiUrl);
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+
+        const data = await response.json();
+        const commitCount = data.length;
+        updateVersion(commitCount);
+    } catch (error) {
+        console.error('Error fetching commit count:', error);
+    }
+}
+
+function updateVersion(commitCount) {
+    const major = 1;  // Adjust based on your versioning strategy
+    const minor = 0;  // Adjust based on your versioning strategy
+    const patch = 0;  // Adjust based on your versioning strategy
+
+    const version = `${major}.${minor}.${commitCount}`;
+    document.getElementById('version-number').textContent = `Version: ${version}`;
+}
+
+fetchCommitCount();
+</script>
 
     <script>
         const contentInput = document.getElementById('contentInput');
