@@ -1,5 +1,4 @@
 /* CSS Variables for easy theme management */
-/* CSS Variables for easy theme management */
 :root {
     --primary-color: #007aff; /* Apple Blue */
     --secondary-color: #0051a3; /* Dark Apple Blue */
@@ -93,11 +92,12 @@ hr {
 }
 
 .expbadge {
-  background: var(--exp-gradient);
-  color: white;
-  font-size: 1rem;
-  border: 0px solid transparent;
-  border-radius: 10px;
+   background: var(--exp-gradient);
+   color: var(--text-color);
+   padding: 10px;
+   font-size: 1rem;
+   border: 0px solid transparent;
+   border-radius: 100px;
 }
 
 h1 {
