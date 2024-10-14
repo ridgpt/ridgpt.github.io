@@ -94,6 +94,9 @@ hr {
 .expbadge {
     background: var(--exp-gradient);
     color: var(--text-color);
+    font-weight: bold;
+    margin-top: 20px;
+    left: 0px;
     padding: 10px;
     font-size: 1rem;
     border: 0px solid transparent;
