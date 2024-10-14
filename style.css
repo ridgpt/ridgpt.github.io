@@ -98,7 +98,9 @@ hr {
     margin-top: 20px;
     left: 0px;
     padding: 10px;
-    font-size: 1rem;
+    font-size: 0.7rem;
+    margin-top: 20px;
+    margin-bottom: 0px;
     border: 0px solid transparent;
     border-radius: 100px;
     right: 0px;
@@ -316,7 +318,7 @@ top: 50%; /* Position from the top */
 }
 
 .info-section {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
     font-size: 0.7rem;
 }
