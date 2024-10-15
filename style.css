@@ -96,7 +96,10 @@ hr {
     font-weight: bold;
     margin-top: 20px;
     left: 0px;
-    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-eight: 10px;
     font-size: 0.7rem;
     margin-bottom: 0px;
     border: 0px solid transparent;
