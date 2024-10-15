@@ -112,6 +112,20 @@ function updateVersion(commitCount) {
 
 // Call the function to fetch commit count and update version
 fetchCommitCount();
+
+// Animate version badge on click
+const animatedElement = document.getElementById('version-number');
+
+animatedElement.addEventListener('click', () => {
+  // Remove the class (if it exists) to restart the animation
+  animatedElement.classList.remove('shake');
+  
+  // Trigger a reflow to reset the animation
+  void animatedElement.offsetWidth;
+
+  // Add the class to trigger the animation
+  animatedElement.classList.add('shake');
+});
     </script>
     
     <script src="app.js"></script>
