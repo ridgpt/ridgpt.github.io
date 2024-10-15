@@ -115,16 +115,25 @@ fetchCommitCount();
 
 // Animate version badge on click
 const animatedElement = document.getElementById('version-number');
+let clickCount = 0;
 
 animatedElement.addEventListener('click', () => {
-  // Remove the class (if it exists) to restart the animation
-  animatedElement.classList.remove('shake');
-  
-  // Trigger a reflow to reset the animation
-  void animatedElement.offsetWidth;
+  clickCount++;
 
-  // Add the class to trigger the animation
-  animatedElement.classList.add('shake');
+  // Check if the element has been clicked twice
+  if (clickCount === 2) {
+    // Remove the class (if it exists) to restart the animation
+    animatedElement.classList.remove('shake');
+
+    // Trigger a reflow to reset the animation
+    void animatedElement.offsetWidth;
+
+    // Add the class to trigger the animation
+    animatedElement.classList.add('shake');
+
+    // Reset the click count after the animation
+    clickCount = 0;
+  }
 });
     </script>
     
