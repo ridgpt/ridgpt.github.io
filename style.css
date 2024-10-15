@@ -108,7 +108,7 @@ hr {
     display: inline-block; /* Ensure it takes up only necessary space */
 }
 
-#version-number:hover {
+.shake {
     animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
 }
 
