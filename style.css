@@ -108,7 +108,7 @@ hr {
     display: inline-block; /* Ensure it takes up only necessary space */
 }
 
-#version-number:hover {
+#version-number:active {
     animation: shake 1s cubic-bezier(.36, .07, .19, .97) both;
 }
 
@@ -241,16 +241,13 @@ button {
     transition: background-image 0.3s, transform 0.2s;
     -webkit-transition: background-image 0.3s, transform 0.2s; /* Safari */
     transition: background-image 0.3s, transform 0.2s;
+    transform: translateY(0);
 }
 
 button:hover {
     background-image: linear-gradient(-145deg, var(--primary-color), var(--secondary-color)); /* Gradient for hover */
     transform: translateY(-2px);
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
-}
-
-button:active {
-    transform: translateY(0);
 }
 
 /* Modal background */
