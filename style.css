@@ -262,6 +262,7 @@ button:hover {
     background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
     transition: opacity 0.5s ease; /* Fade-out transition */
     opacity: 1; /* Start with 0 opacity */
+    pointer-events: none;
 }
 
 .modal.fade-out {
@@ -270,6 +271,7 @@ button:hover {
 
 /* Modal Content */
 .modal-content {
+    pointer-events: auto;
     background: var(--background-gradient);
     padding: 20px;
     padding-top: 20px;
