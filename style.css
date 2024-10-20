@@ -252,6 +252,7 @@ button:hover {
 
 /* Modal background */
 .modal {
+    backdrop-filter: blur(10px); /* Glass effect */
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -271,7 +272,6 @@ button:hover {
 
 /* Modal Content */
 .modal-content {
-    pointer-events: auto;
     background: var(--background-gradient);
     padding: 20px;
     padding-top: 20px;
@@ -290,6 +290,7 @@ button:hover {
 top: 50%; /* Position from the top */
     left: 50%; /* Position from the left */
     transform: translate(-50%, -50%); /* Center the modal */
+    pointer-events: auto;
 }
 
 /* Close Button */
