@@ -23,10 +23,16 @@ function createModal(modalFileName, deviceType) {
             const modal = modalContainer.querySelector('.modal');
             const modalContent = modal.querySelector('.modal-content');
 
+            // Create the background blur layer
+            const blurLayer = document.createElement('div');
+            blurLayer.className = 'background-blur';
+            document.body.appendChild(blurLayer);
+
             // Append the modal to the body
             document.body.appendChild(modal);
 
-            // Display the modal
+            // Display the modal and blur layer
+            blurLayer.style.display = 'block';
             modal.style.display = 'block';
 
             // Populate app instructions based on the device type
@@ -61,7 +67,9 @@ function createModal(modalFileName, deviceType) {
                     modal.classList.add('fade-out'); // Add the fade-out class
                     setTimeout(() => {
                         modal.style.display = 'none';
+                        blurLayer.style.display = 'none'; // Hide the blur layer on close
                         document.body.removeChild(modal); // Remove modal from DOM on close
+                        document.body.removeChild(blurLayer); // Remove blur layer from DOM on close
                         localStorage.setItem('modalClosed', 'true'); // Set the flag to not show the modal again
                     }, 500); // Match this timeout with the CSS transition duration (0.5s)
                 };
@@ -73,7 +81,9 @@ function createModal(modalFileName, deviceType) {
                     modal.classList.add('fade-out'); // Add the fade-out class
                     setTimeout(() => {
                         modal.style.display = 'none';
+                        blurLayer.style.display = 'none'; // Hide the blur layer on close
                         document.body.removeChild(modal); // Remove modal from DOM on close
+                        document.body.removeChild(blurLayer); // Remove blur layer from DOM on close
                         localStorage.setItem('modalClosed', 'true'); // Set the flag to not show the modal again
                     }, 500); // Match this timeout with the CSS transition duration (0.5s)
                 }
