@@ -259,7 +259,9 @@ button:hover {
     top: 0;
     width: 100%; /* Full width */
     height: 100%; /* Full height */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
     transition: opacity 0.5s ease; /* Fade-out transition */
+    backdrop-filter: blur(10px);
     opacity: 1; /* Start with 0 opacity */
     pointer-events: none;
 }
@@ -296,20 +298,6 @@ top: 50%; /* Position from the top */
 .close {
     float: center;
     bottom: 0px;
-}
-
-.background-blur {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
-    transition: opacity 0.5s ease; /* Fade-out transition */
-    backdrop-filter: blur(10px);
-    z-index: 500; /* Behind the modal */
 }
 
 #result {
