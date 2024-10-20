@@ -263,7 +263,7 @@ button:hover {
     transition: opacity 0.5s ease; /* Fade-out transition */
     opacity: 1; /* Start with 0 opacity */
     pointer-events: none;
-    filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .modal.fade-out {
@@ -291,7 +291,7 @@ top: 50%; /* Position from the top */
     left: 50%; /* Position from the left */
     transform: translate(-50%, -50%); /* Center the modal */
     pointer-events: auto;
-    filter: blur(0px);
+    backdrop-filter: blur(0px);
 }
 
 /* Close Button */
