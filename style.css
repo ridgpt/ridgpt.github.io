@@ -142,7 +142,7 @@ h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: slideDown 0.5s ease-out;
+    animation: slideDown 1s ease-out;
 }
 
 .logo {
@@ -317,7 +317,7 @@ top: 50%; /* Position from the top */
     font-size: 1.2rem;
     min-height: 30px;
     transition: opacity 0.5s ease, transform 0.5s ease;
-    animation: slideDown 0.5s ease-out;
+    animation: slideDown 1s ease-out;
 }
 
 .reshed {
