@@ -325,7 +325,7 @@ top: 50%; /* Position from the top */
 }
 
 .info-section {
-    line-height: 0;
+    line-height: 1;
     margin-top: 20px;
     margin-bottom: 20px;
     font-size: 0.7rem;
