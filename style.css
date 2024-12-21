@@ -323,8 +323,8 @@ top: 50%; /* Position from the top */
 }
 
 .info-section {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     font-size: 0.7rem;
 }
 
