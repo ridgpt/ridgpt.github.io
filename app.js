@@ -247,7 +247,7 @@ document.getElementById('checkBtn').addEventListener('click', async function() {
     Refine Content Checker <i class="fa-solid fa-rotate-right"></i>
     <h6 class="small" style="margin-top:0px;">Only attempt to refine the content checker when delayed results and/or inaccurate results become frequent. <i class="fa-solid fa-circle-info"></i></h6>
 </button>
-<hr style="margin-left: 0;width: 5%;margin-bottom: 0;">
+<hr style="margin-left: 0;width: 100%;margin-bottom: 0;">
             <h6 class="reshed" style="margin-top: 20px;margin-bottom:0px;">Results <i class="fa-solid fa-chevron-down gradient-icon"></i></h6>
                         <h6 class="reshed" style="font-size:0.7rem;">Never use these results to make decisions on someone's academic standing or career, as these results may not always be accurate. <i class="fa-solid fa-triangle-exclamation"></i></h6>
         
