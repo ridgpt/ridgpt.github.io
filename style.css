@@ -150,7 +150,6 @@ h6 {
     margin-top: 20px;
     height: 50px;
     float: left;
-    animation-iteration-count: 1;
     animation: rotateIn 1.5s ease forwards;
 }
 
@@ -166,7 +165,6 @@ h6 {
     margin-top: 20px;
     height: 50px;
     float: left;
-    animation-iteration-count: 1;
     animation: rotateIn 1.5s ease forwards;
 }
 
