@@ -413,13 +413,23 @@ top: 50%; /* Position from the top */
   }
 }
 
-/* Spin */
 @keyframes spin {
     0% {
         transform: rotate(0deg);
     }
     100% {
         transform: rotate(360deg);
+    }
+}
+
+@keyframes revealIn {
+    from {
+        opacity: 0;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1); /* Expand to full width */
     }
 }
 
