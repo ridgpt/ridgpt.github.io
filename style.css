@@ -70,7 +70,7 @@ hr {
     background: var(--card-background); /* Glass effect */
     backdrop-filter: blur(10px); /* Glass effect */
     padding: 40px;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 50px; /* Rounded corners */
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
     background: linear-gradient(#ffffff, #ffffff) padding-box,
                linear-gradient(145deg, var(--primary-color), var(--secondary-color));
@@ -182,12 +182,13 @@ a {
 }
 
 textarea {
+    position: relative;
     font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     width: 100%;
     padding: 15px;
     background: linear-gradient(#ffffff, #ffffff) padding-box,
                linear-gradient(145deg, var(--primary-color), var(--secondary-color));
-    border-radius: 10px;
+    border-radius: 50px;
     margin-top: 20px;
     border: 2px solid transparent;
     resize: none;
@@ -202,6 +203,17 @@ textarea {
     margin-bottom: 0px;
 }
 
+textarea::before {
+  --d: -20px; /* bigger than the value of the blur with negative sign*/
+  content: '';
+  z-index: -1;
+  position: absolute;
+  inset:0;
+  background: linear-gradient(#e66465, #9198e5);
+  filter: blur(10px);
+  clip-path: polygon(var(--d) var(--d),calc(100% - var(--d)) var(--d),calc(100% - var(--d)) calc(100% - var(--d)),var(--d) calc(100% - var(--d)),var(--d) var(--d),0 0,0 100%,100% 100%,100% 0,0 0);
+}
+
 textarea::placeholder {
     color: #999; /* Light gray for placeholder */
 }
@@ -209,7 +221,7 @@ textarea::placeholder {
 textarea:focus {
     background: linear-gradient(#ffffff, #ffffff) padding-box,
                linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
-    border-radius: 10px;
+    border-radius: 50px;
     border: 2px solid transparent;
     outline: none;
     transform: translateY(-2px);
@@ -232,7 +244,7 @@ button {
     margin-top: 20px;
     background-image: linear-gradient(145deg, var(--primary-color), var(--secondary-color)); /* Gradient for button */
     border: none;
-    border-radius: 10px; /* Rounded corners */
+    border-radius: 50px; /* Rounded corners */
     color: #ffffff; /* White text for button */
     font-size: 1.2rem;
     cursor: pointer;
@@ -275,7 +287,7 @@ button:hover {
     padding: 20px;
     padding-top: 20px;
     padding-bottom: 20px;
-    border-radius: 15px; /* Rounded corners */
+    border-radius: 50px; /* Rounded corners */
     box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
     backdrop-filter: blur(10px); /* Glass effect */
     background: linear-gradient(#ffffff, #ffffff) padding-box,
