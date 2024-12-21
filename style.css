@@ -351,7 +351,7 @@ top: 50%; /* Position from the top */
 #charCount {
     position: absolute;
 	color: var(--card-background);
-    padding: 10px;
+    background-image: linear-gradient(145deg, var(--primary-color), var(--secondary-color)); /* Gradient for button */
     bottom: -10px; /* Adjust as necessary */
     right: 0px; /* Adjust as necessary */
     font-size: 0.7rem; /* Adjust font size as necessary */
