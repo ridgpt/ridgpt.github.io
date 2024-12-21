@@ -142,7 +142,6 @@ h6 {
     align-items: center;
     justify-content: center;
     animation: slideDown 0.5s ease-out;
-    margin-bottom: 20px;
 }
 
 .logo {
@@ -269,6 +268,7 @@ button:hover {
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    backdrop-filter: blur(10px);
     transition: opacity 0.5s ease; /* Fade-out transition */
     opacity: 1; /* Start with 0 opacity */
     pointer-events: none;
