@@ -35,7 +35,7 @@ body {
     align-items: center;
     min-height: 100vh;
     text-align: center;
-    animation: fadeIn 1s ease-in-out; /* Fade and zoom-in animation */
+    animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
     overflow: auto;
     display: flex; /* Added for flexbox support */
     flex-direction: column; /* Added for vertical alignment */
