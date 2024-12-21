@@ -28,6 +28,7 @@ body {
     color: var(--text-color);
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
+    text-shadow: 5px 5px 15px rgba(0,0,0,0.57);
     padding-top: 20px;
     padding-bottom: 20px;
     text-size-adjust: none;
@@ -146,6 +147,7 @@ h6 {
     margin-top: 20px;
     height: 50px;
     float: left;
+    margin-bottom: 20px;
 }
 
 .logo:hover {
