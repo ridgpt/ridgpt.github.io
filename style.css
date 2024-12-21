@@ -28,7 +28,6 @@ body {
     color: var(--text-color);
     -moz-text-size-adjust: none;
     -webkit-text-size-adjust: none;
-    line-height: 1;
     padding-top: 20px;
     padding-bottom: 20px;
     text-size-adjust: none;
@@ -40,6 +39,10 @@ body {
     overflow: auto;
     display: flex; /* Added for flexbox support */
     flex-direction: column; /* Added for vertical alignment */
+}
+
+body, button, .modal, textarea {
+    line-height: 1;
 }
 
 hr {
