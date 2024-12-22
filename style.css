@@ -43,10 +43,6 @@ body, button, .modal, textarea {
     line-height: 1;
 }
 
-.body-replacement {
-    animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
-}
-
 hr {
     background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: 0;
@@ -86,6 +82,11 @@ background: linear-gradient(#ffffff, #ffffff) padding-box,
     max-width: 480px; 
     padding-bottom: 20px;
     padding-top: 0px;
+    animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
+}
+
+.bottom-container {
+    animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
 }
 
 .gradient-icon {
