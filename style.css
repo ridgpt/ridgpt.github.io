@@ -294,9 +294,7 @@ button:hover {
     max-height: 100%;
     overflow-y: auto; /* Enable scrolling if the content exceeds the max height */
     position: relative; /* Changed to relative for better centering */
-top: 50%; /* Position from the top */
-    left: 50%; /* Position from the left */
-    transform: translate(-50%, -50%); /* Center the modal */
+    margin: auto;
     pointer-events: auto;
 }
 
