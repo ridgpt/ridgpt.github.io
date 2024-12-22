@@ -272,7 +272,6 @@ button:hover {
     transition: opacity 0.5s ease; /* Fade-out transition */
     opacity: 1; /* Start with 0 opacity */
     pointer-events: none;
-    animation: none;
 }
 
 .modal.fade-out {
@@ -296,7 +295,6 @@ button:hover {
     overflow-y: auto;
     position: relative;
     pointer-events: auto;
-    animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
 }
 
 /* Initial Transform State */
