@@ -35,8 +35,9 @@ body {
     min-height: 100vh;
     text-align: center;
     animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    transform-origin: 50% 25%;
     overflow: auto;
     display: flex; /* Added for flexbox support */
     flex-direction: column; /* Added for vertical alignment */
