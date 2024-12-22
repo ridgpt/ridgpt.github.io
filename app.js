@@ -305,7 +305,7 @@ async function retrainChecker(button) {
 }
 
 function showModal(modalElement) {
-    // Ensure modal is visible before applying the animation
+    // Ensure modal is visible immediately
     modalElement.style.display = 'block'; // Ensure it's set to block so it can be seen
 
     // Apply transformation first (no animation yet)
