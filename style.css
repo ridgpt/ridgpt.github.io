@@ -299,11 +299,11 @@ button:hover {
     transform-origin: 50% 25%;
     transform: translate(-50%, -50%);
     pointer-events: auto;
-    animation: showIn 1000ms linear;
+    animation: slideUp 1000ms linear;
 }
 
-@keyframes showIn {
-  0% { transform: translate(50%, -50%) }
+@keyframes slideUp {
+  0% { transform: translate(50%, 50%) }
   100% { transform: translate(-50%, -50%) }
 }
 
