@@ -303,3 +303,24 @@ async function retrainChecker(button) {
         button.disabled = false;
     }
 }
+
+function showModal(modalElement) {
+    // Apply transformation first
+    modalElement.style.transition = 'none'; // Disable transition for instant transformation
+    modalElement.style.transform = 'translate(-50%, -50%)';
+
+    // Force a reflow to ensure the transformation is applied
+    modalElement.offsetHeight; // This triggers the browser to apply the transform immediately
+
+    // Re-enable transitions and add animation
+    setTimeout(() => {
+        modalElement.style.transition = 'transform 0.3s ease-out'; // Re-enable transition
+        modalElement.classList.add('animate'); // Add the animation class to trigger fade-in
+    }, 10); // Small timeout to ensure the transformation is applied before animation starts
+}
+
+// Example usage
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.modal-content');
+    showModal(modal); // Call function to show the modal
+});
