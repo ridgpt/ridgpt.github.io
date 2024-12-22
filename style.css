@@ -296,10 +296,26 @@ button:hover {
     position: relative; /* Changed to relative for better centering */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); /* Apply transformation initially */
     pointer-events: auto;
+    opacity: 0; /* Start with the modal invisible */
+    transition: transform 0.3s ease-out; /* Smooth transition for the transform */
 }
 
+/* Animation */
+@keyframes fadeInAlt {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.modal-content.animate {
+    animation: fadeInAlt 1.3s ease-in-out forwards;
+    opacity: 1; /* Ensure opacity is set for the animation */
+}
 /* Close Button */
 .close {
     float: center;
