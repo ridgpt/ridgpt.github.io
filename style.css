@@ -296,16 +296,10 @@ button:hover {
     position: relative; /* Changed to relative for better centering */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0); /* Start with scale(0) */
+    transform: translate(-50%, -50%);
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0; /* Hidden initially */
     pointer-events: auto;
-}
-
-/* Add a visible state */
-.modal-content.show {
-    transform: translate(-50%, -50%) scale(1); /* Animate scale */
-    opacity: 1; /* Fade-in opacity */
 }
 
 /* Close Button */
