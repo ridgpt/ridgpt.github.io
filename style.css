@@ -35,9 +35,6 @@ body {
     min-height: 100vh;
     text-align: center;
     animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
-    bottom: 50%;
-    right: 50%;
-    transform: translate(-50%, -50%);
     overflow: auto;
     display: flex; /* Added for flexbox support */
     flex-direction: column; /* Added for vertical alignment */
@@ -301,6 +298,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%);
     pointer-events: auto;
+    animation: fadeInAlt 1.3s ease-in-out; /* Fade and zoom-in alternate animation */
 }
 
 /* Close Button */
@@ -364,8 +362,13 @@ button:hover {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95) translate(-50%, -50%); }
-    to { opacity: 1; transform: scale(1) translate(-50%, -50%); }
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeInAlt {
+    from { opacity: 0; scale(0.95) translate(-50%, -50%); }
+    to { opacity: 1; scale(1) translate(-50%, -50%); }
 }
 
 @keyframes slideDown {
