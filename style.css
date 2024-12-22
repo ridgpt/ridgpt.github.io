@@ -92,6 +92,19 @@ background: linear-gradient(#ffffff, #ffffff) padding-box,
 .bottom-container {
     animation: slideUp 1.3s ease-out;
 }
+
+.alternative-container {
+	background: var(--card-background);
+background: linear-gradient(#ffffff, #ffffff) padding-box,
+               linear-gradient(145deg, var(--primary-color), var(--secondary-color));
+	 box-shadow: 0 8px 16px 0 var(--shadow), 0 6px 20px 0 rgba(0,0,0,0.19);
+    padding: 20px;
+    border-radius: 30px; /* Rounded corners */
+    border: 2px solid transparent;
+    width: 100%;
+    margin: auto;
+    max-width: 480px; 
+}
     
 .gradient-icon {
     font-size: 1.4rem; /* Adjust icon size */
