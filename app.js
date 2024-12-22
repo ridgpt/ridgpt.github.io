@@ -303,13 +303,3 @@ async function retrainChecker(button) {
         button.disabled = false;
     }
 }
-
-document.getElementById('openModal').addEventListener('click', function () {
-  const modalContent = document.getElementById('modalContent');
-  modalContent.classList.add('show');
-});
-
-document.getElementById('closeModal').addEventListener('click', function () {
-  const modalContent = document.getElementById('modalContent');
-  modalContent.classList.remove('show');
-});
