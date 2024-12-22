@@ -270,7 +270,7 @@ button:hover {
     height: 100%; /* Full height */
     background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
     backdrop-filter: blur(10px);
-    will-change: backdrop-filter;
+    transform: translateZ(0);
     transition: opacity 0.5s ease; /* Fade-out transition */
     opacity: 1; /* Start with 0 opacity */
     pointer-events: none;
