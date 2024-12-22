@@ -298,7 +298,7 @@ button:hover {
     left: 50%;
     transform: translate(-50%, -50%); /* Initial transform */
     pointer-events: auto;
-    opacity: 0; /* Start with the modal invisible */
+    opacity: 1; /* Start with the modal visible */
     transition: transform 0.3s ease-out, opacity 1.3s ease-in-out; /* Smooth transition for transform and opacity */
     z-index: 1000; /* Ensure the modal is on top */
 }
