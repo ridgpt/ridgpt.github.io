@@ -293,29 +293,11 @@ button:hover {
     max-width: 800px; /* Optional: limit max width */
     max-height: 100%;
     overflow-y: auto; /* Enable scrolling if the content exceeds the max height */
-    position: absolute; /* Changed to absolute for better visibility */
+    position: relative; /* Changed to relative for better centering */
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Initial transform */
+    transform: translate(-50%, -50%);
     pointer-events: auto;
-    opacity: 1; /* Start with the modal visible */
-    transition: transform 0.3s ease-out, opacity 1.3s ease-in-out; /* Smooth transition for transform and opacity */
-    z-index: 1000; /* Ensure the modal is on top */
-}
-
-/* Animation */
-@keyframes fadeInAlt {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-.modal-content.animate {
-    animation: fadeInAlt 1.3s ease-in-out forwards;
-    opacity: 1; /* Ensure opacity is set for the animation */
 }
 
 /* Close Button */
