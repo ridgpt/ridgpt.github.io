@@ -86,9 +86,9 @@ background: linear-gradient(#ffffff, #ffffff) padding-box,
 }
 
 .bottom-container {
-    animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
+    animation: slideUp 1.3s ease-out;
 }
-
+    
 .gradient-icon {
     font-size: 1.4rem; /* Adjust icon size */
     background: linear-gradient(-145deg, var(--primary-color), var(--secondary-color));
@@ -373,6 +373,11 @@ button:hover {
 @keyframes fadeInAlt {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 @keyframes slideDown {
