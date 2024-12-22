@@ -303,3 +303,25 @@ async function retrainChecker(button) {
         button.disabled = false;
     }
 }
+
+// Function to show the modal with transformations and animations applied in sequence
+function showModal(modalElement) {
+    // Step 1: Apply the initial transformation (without animation)
+    modalElement.classList.add('modal-initial');
+
+    // Step 2: Force the browser to apply the transformation
+    modalElement.offsetHeight; // Trigger reflow (flushes styles)
+
+    // Step 3: Apply the animation (fade-in)
+    modalElement.classList.add('modal-animate');
+}
+
+// Example usage on DOMContentLoaded event to ensure the modal is ready to be manipulated
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.modal-content');
+    
+    // Delay showing the modal to simulate initialization (optional)
+    setTimeout(() => {
+        showModal(modal);
+    }, 100); // Optional delay of 100ms before applying transformation and animation
+});
