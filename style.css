@@ -43,7 +43,7 @@ body, button, .modal, textarea {
     line-height: 1;
 }
 
-.bodyreplacement {
+.body-replacement {
     animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
 }
 
