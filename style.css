@@ -43,6 +43,10 @@ body, button, .modal, textarea {
     line-height: 1;
 }
 
+.animated-body {
+    animation: fadeIn 1.3s ease-in-out; /* Fade and zoom-in animation */
+}
+
 hr {
     background-image: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     border: 0;
